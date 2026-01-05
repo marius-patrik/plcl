@@ -1,0 +1,2168 @@
+[
+  {
+    "name": "ButtonProps",
+    "kind": "interface",
+    "description": "ButtonProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").ButtonVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "as",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").ButtonType",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "AlertProps",
+    "kind": "interface",
+    "description": "AlertProps interface",
+    "properties": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").AlertVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withCloseButton",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "AvatarProps",
+    "kind": "interface",
+    "description": "AvatarProps interface",
+    "properties": [
+      {
+        "name": "src",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "initials",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "BadgeProps",
+    "kind": "interface",
+    "description": "BadgeProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").BadgeVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "KbdProps",
+    "kind": "interface",
+    "description": "KbdProps interface",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "CodeProps",
+    "kind": "interface",
+    "description": "CodeProps interface",
+    "properties": [
+      {
+        "name": "block",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "BlockquoteProps",
+    "kind": "interface",
+    "description": "BlockquoteProps interface",
+    "properties": [
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "cite",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "CheckboxProps",
+    "kind": "interface",
+    "description": "CheckboxProps interface",
+    "properties": [
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "indeterminate",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "InputProps",
+    "kind": "interface",
+    "description": "InputProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "\"filled\" | \"unstyled\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "wrapperProps",
+        "type": "React.InputHTMLAttributes<HTMLDivElement>",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TextareaProps",
+    "kind": "interface",
+    "description": "TextareaProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "\"filled\" | \"unstyled\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "autosize",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "minRows",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "maxRows",
+        "type": "number",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "PasswordInputProps",
+    "kind": "interface",
+    "description": "PasswordInputProps interface",
+    "properties": [
+      {
+        "name": "visibilityToggleIcon",
+        "type": "(visible: boolean) => React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "NumberInputProps",
+    "kind": "interface",
+    "description": "NumberInputProps interface",
+    "properties": [
+      {
+        "name": "min",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "hideControls",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "RadioProps",
+    "kind": "interface",
+    "description": "RadioProps interface",
+    "properties": [
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SelectItem",
+    "kind": "interface",
+    "description": "SelectItem interface",
+    "properties": [
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SelectProps",
+    "kind": "interface",
+    "description": "SelectProps interface",
+    "properties": [
+      {
+        "name": "data",
+        "type": "(string | import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").SelectItem)[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"filled\" | \"unstyled\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SegmentedControlItem",
+    "kind": "interface",
+    "description": "SegmentedControlItem interface",
+    "properties": [
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SegmentedControlProps",
+    "kind": "interface",
+    "description": "SegmentedControlProps interface",
+    "properties": [
+      {
+        "name": "data",
+        "type": "(string | import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").SegmentedControlItem)[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SliderProps",
+    "kind": "interface",
+    "description": "SliderProps interface",
+    "properties": [
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "marks",
+        "type": "{ value: number; label?: React.ReactNode; }[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Size",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SwitchProps",
+    "kind": "interface",
+    "description": "SwitchProps interface",
+    "properties": [
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onLabel",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "offLabel",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "CardProps",
+    "kind": "interface",
+    "description": "CardProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").CardVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "AccordionProps",
+    "kind": "interface",
+    "description": "AccordionProps interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "variant",
+        "type": "\"filled\" | \"default\" | \"contained\" | \"separated\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Radius",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "ProgressProps",
+    "kind": "interface",
+    "description": "ProgressProps interface",
+    "properties": [
+      {
+        "name": "value",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "striped",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "animated",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "LoadingProps",
+    "kind": "interface",
+    "description": "LoadingProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").LoadingVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "SkeletonProps",
+    "kind": "interface",
+    "description": "SkeletonProps interface",
+    "properties": [
+      {
+        "name": "visible",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "string | number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "string | number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "circle",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "animate",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TabsProps",
+    "kind": "interface",
+    "description": "TabsProps interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"outline\" | \"default\" | \"pills\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Radius",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "MenuProps",
+    "kind": "interface",
+    "description": "MenuProps interface",
+    "properties": [
+      {
+        "name": "closeOnItemClick",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "trigger",
+        "type": "\"click\" | \"hover\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "BurgerProps",
+    "kind": "interface",
+    "description": "BurgerProps interface",
+    "properties": [
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Size",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "DrawerProps",
+    "kind": "interface",
+    "description": "DrawerProps interface",
+    "properties": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "position",
+        "type": "\"left\" | \"right\" | \"top\" | \"bottom\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "string | number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "padding",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "overlay",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "PopoverProps",
+    "kind": "interface",
+    "description": "PopoverProps interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "target",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "dropdown",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(opened: boolean) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "position",
+        "type": "\"left\" | \"right\" | \"top\" | \"bottom\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withArrow",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "string | number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "trapFocus",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "closeOnClickOutside",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TooltipProps",
+    "kind": "interface",
+    "description": "TooltipProps interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "position",
+        "type": "\"left\" | \"right\" | \"top\" | \"bottom\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withArrow",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "ModalProps",
+    "kind": "interface",
+    "description": "ModalProps interface",
+    "properties": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onSave",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "closeButton",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "saveButton",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "BoxProps",
+    "kind": "interface",
+    "description": "BoxProps interface",
+    "properties": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "buttons",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "ContainerProps",
+    "kind": "interface",
+    "description": "ContainerProps interface",
+    "properties": [
+      {
+        "name": "fluid",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "DividerProps",
+    "kind": "interface",
+    "description": "DividerProps interface",
+    "properties": [
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "labelPosition",
+        "type": "\"left\" | \"right\" | \"center\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "GridProps",
+    "kind": "interface",
+    "description": "GridProps interface",
+    "properties": [
+      {
+        "name": "cols",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").GridCols",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gap",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").GridGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "FlexProps",
+    "kind": "interface",
+    "description": "FlexProps interface",
+    "properties": [
+      {
+        "name": "direction",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").FlexDirection",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "justify",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").FlexJustify",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").FlexAlign",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gap",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").FlexGap",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "wrap",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "StackProps",
+    "kind": "interface",
+    "description": "StackProps interface",
+    "properties": [
+      {
+        "name": "gap",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").StackGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "GroupProps",
+    "kind": "interface",
+    "description": "GroupProps interface",
+    "properties": [
+      {
+        "name": "gap",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").GroupGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TextProps",
+    "kind": "interface",
+    "description": "TextProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "\"text\" | \"link\" | \"gradient\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "dimmed",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gradient",
+        "type": "{ from: string; to: string; deg?: number; }",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "span",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fw",
+        "type": "string | number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "component",
+        "type": "React.ElementType",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "truncate",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "lineClamp",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "\"left\" | \"right\" | \"center\" | \"justify\"",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TitleProps",
+    "kind": "interface",
+    "description": "TitleProps interface",
+    "properties": [
+      {
+        "name": "order",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/components\").TitleOrder",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "ButtonVariant",
+    "kind": "type",
+    "description": "ButtonVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "ButtonType",
+    "kind": "type",
+    "description": "ButtonType type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "AlertVariant",
+    "kind": "type",
+    "description": "AlertVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "BadgeVariant",
+    "kind": "type",
+    "description": "BadgeVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "CardVariant",
+    "kind": "type",
+    "description": "CardVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "LoadingVariant",
+    "kind": "type",
+    "description": "LoadingVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "GridCols",
+    "kind": "type",
+    "description": "GridCols type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "GridGap",
+    "kind": "type",
+    "description": "GridGap type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "FlexDirection",
+    "kind": "type",
+    "description": "FlexDirection type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "FlexJustify",
+    "kind": "type",
+    "description": "FlexJustify type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "FlexAlign",
+    "kind": "type",
+    "description": "FlexAlign type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "FlexGap",
+    "kind": "type",
+    "description": "FlexGap type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "StackGap",
+    "kind": "type",
+    "description": "StackGap type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "GroupGap",
+    "kind": "type",
+    "description": "GroupGap type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "AppIconProps",
+    "kind": "type",
+    "description": "AppIconProps type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "TitleOrder",
+    "kind": "type",
+    "description": "TitleOrder type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/components.ts"
+  },
+  {
+    "name": "WindowState",
+    "kind": "interface",
+    "description": "WindowState interface",
+    "properties": [
+      {
+        "name": "position",
+        "type": "{ x: number; y: number; }",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "{ width: number; height: number; }",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "isFullscreen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "isMaximized",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "isDragging",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "isResizing",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/desktop.ts"
+  },
+  {
+    "name": "AppWindowProps",
+    "kind": "interface",
+    "description": "AppWindowProps interface",
+    "properties": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "handleClose",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onFocus",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "resetKey",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowState",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/desktop\").WindowState",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onWindowStateChange",
+        "type": "(state: import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/desktop\").WindowState) => void",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/desktop.ts"
+  },
+  {
+    "name": "AppDefinition",
+    "kind": "interface",
+    "description": "AppDefinition interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "Component",
+        "type": "React.ComponentType<import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/desktop\").AppWindowProps>",
+        "description": "",
+        "required": true
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/desktop.ts"
+  },
+  {
+    "name": "HeaderProps",
+    "kind": "interface",
+    "description": "HeaderProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").HeaderVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "showDarkModeToggle",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "FooterProps",
+    "kind": "interface",
+    "description": "FooterProps interface",
+    "properties": [
+      {
+        "name": "hideByDefault",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").FooterVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "MainProps",
+    "kind": "interface",
+    "description": "MainProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").MainVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "SidebarProps",
+    "kind": "interface",
+    "description": "SidebarProps interface",
+    "properties": [
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "ShellItemProps",
+    "kind": "interface",
+    "description": "ShellItemProps interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "ShellProps",
+    "kind": "interface",
+    "description": "ShellProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").ShellVariant",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "backgroundImage",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "backgroundOverlay",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "customApps",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/desktop\").AppDefinition[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowTitle",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowHandleClose",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowZIndex",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowOnFocus",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "windowState",
+        "type": "{ position: { x: number; y: number; }; size: { width: number; height: number; }; isFullscreen: boolean; isMaximized: boolean; isDragging: boolean; isResizing: boolean; }",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onWindowStateChange",
+        "type": "(state: { position: { x: number; y: number; }; size: { width: number; height: number; }; isFullscreen: boolean; isMaximized: boolean; isDragging: boolean; isResizing: boolean; }) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "headerVariant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").HeaderVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "footerVariant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").FooterVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mainVariant",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/layout\").MainVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "headerContent",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "footerContent",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mainContent",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "main",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "sidebar",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "sidebarContent",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "menuItems",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").NavigationMenuItem[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "pages",
+        "type": "Record<string, React.ReactNode>",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultPageId",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onPageChange",
+        "type": "(pageId: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "navigationItems",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").NavigationMenuItem[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultActivePageId",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "isMainScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "isSidebarScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "HeaderVariant",
+    "kind": "type",
+    "description": "HeaderVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "FooterVariant",
+    "kind": "type",
+    "description": "FooterVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "MainVariant",
+    "kind": "type",
+    "description": "MainVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "ShellVariant",
+    "kind": "type",
+    "description": "ShellVariant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/layout.ts"
+  },
+  {
+    "name": "NavigationMenuItem",
+    "kind": "interface",
+    "description": "NavigationMenuItem interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "component",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onClick",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/navigation.ts"
+  },
+  {
+    "name": "NavigationMenuProps",
+    "kind": "interface",
+    "description": "NavigationMenuProps interface",
+    "properties": [
+      {
+        "name": "items",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").NavigationMenuItem[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "defaultActiveId",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onItemChange",
+        "type": "(itemId: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "\"app\" | \"desktop\" | \"page\" | \"sidebar\"",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/navigation.ts"
+  },
+  {
+    "name": "SidebarNavigationItem",
+    "kind": "interface",
+    "description": "SidebarNavigationItem interface",
+    "properties": [
+      {
+        "name": "title",
+        "type": "string",
+        "description": "",
+        "required": true
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/navigation.ts"
+  },
+  {
+    "name": "SidebarNavigationProps",
+    "kind": "interface",
+    "description": "SidebarNavigationProps interface",
+    "properties": [
+      {
+        "name": "items",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").SidebarNavigationItem[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "activeItem",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").SidebarNavigationItem",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(item: import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/navigation\").SidebarNavigationItem) => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "sections",
+        "type": "string[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/navigation.ts"
+  },
+  {
+    "name": "StylingProps",
+    "kind": "interface",
+    "description": "StylingProps interface",
+    "properties": [
+      {
+        "name": "variant",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "m",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mt",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mb",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "ml",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mr",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "mx",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "my",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "p",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "pt",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "pb",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "pl",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "pr",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "px",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "py",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Spacing",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Radius",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "shadow",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Shadow",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-core-types/src/styles\").Size",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  },
+  {
+    "name": "Size",
+    "kind": "type",
+    "description": "PLC Core Types - Styling Types\nBase styling types used across all components",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  },
+  {
+    "name": "Spacing",
+    "kind": "type",
+    "description": "Spacing type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  },
+  {
+    "name": "Radius",
+    "kind": "type",
+    "description": "Radius type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  },
+  {
+    "name": "Shadow",
+    "kind": "type",
+    "description": "Shadow type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  },
+  {
+    "name": "Variant",
+    "kind": "type",
+    "description": "Variant type",
+    "properties": [],
+    "sourceFile": "/@plcl-core-types/src/styles.ts"
+  }
+]

@@ -57,6 +57,7 @@ const Footer: FC<PropsWithChildren<FooterProps>> = ({
 	...props
 }) => {
 	const [isHovered, setIsHovered] = useState(false);
+	const { style: _style, ...restProps } = props as any;
 
 	if (variant === 'page' || variant === 'sidebar') {
 		return (
@@ -69,12 +70,12 @@ const Footer: FC<PropsWithChildren<FooterProps>> = ({
 	if (variant === 'app') {
 		return (
 			<Box
-				variant="glass"
+				style="glass"
 				radius="full"
 				p="sm"
 				px="lg"
 				className={`fixed bottom-2 left-1/2 -translate-x-1/2 z-50 md:invisible flex flex-row gap-3 ${className}`}
-				{...props}
+				{...restProps}
 			>
 				{children}
 			</Box>
@@ -92,7 +93,7 @@ const Footer: FC<PropsWithChildren<FooterProps>> = ({
 				/>
 				{/* Footer that appears on hover */}
 				<Box
-					variant="glass"
+					style="glass"
 					radius="2xl"
 					p="sm"
 					className={`system-overlay-50 bottom-2 max-w-[95vw] left-1/2 -translate-x-1/2 flex flex-row gap-3 overflow-x-auto transition-all duration-300 ${
@@ -101,7 +102,7 @@ const Footer: FC<PropsWithChildren<FooterProps>> = ({
 							: 'opacity-0 translate-y-full pointer-events-none'
 					} ${className}`}
 					onMouseLeave={() => setIsHovered(false)}
-					{...props}
+					{...restProps}
 				>
 					{children}
 				</Box>
@@ -111,11 +112,11 @@ const Footer: FC<PropsWithChildren<FooterProps>> = ({
 
 	return (
 		<Box
-			variant="glass"
+			style="glass"
 			radius="2xl"
 			p="sm"
 			className={`system-overlay-50 bottom-2 max-w-[95vw] left-1/2 -translate-x-1/2 flex flex-row gap-3 overflow-x-auto ${className}`}
-			{...props}
+			{...restProps}
 		>
 			{children}
 		</Box>

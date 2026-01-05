@@ -5,7 +5,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
  * Props for the Switch component.
  */
 export interface SwitchProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'style'>,
 		StylingProps {
 	/** Label displayed next to the switch */
 	label?: ReactNode;
@@ -56,6 +56,7 @@ const Switch: FC<SwitchProps> = ({
 	id,
 	disabled,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -76,6 +77,7 @@ const Switch: FC<SwitchProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

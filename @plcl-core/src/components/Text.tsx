@@ -1,8 +1,10 @@
 import type { ElementType, FC, HTMLAttributes, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
-export interface TextProps extends HTMLAttributes<HTMLElement>, StylingProps {
-	variant?: 'text' | 'link' | 'gradient';
+export type TextVariant = 'default' | 'unstyled' | 'text' | 'link' | 'gradient';
+
+export interface TextProps extends Omit<HTMLAttributes<HTMLElement>, 'style'>, StylingProps {
+	variant?: TextVariant;
 	dimmed?: boolean;
 	gradient?: { from: string; to: string; deg?: number };
 	span?: boolean;
@@ -14,7 +16,7 @@ export interface TextProps extends HTMLAttributes<HTMLElement>, StylingProps {
 }
 
 const Text: FC<TextProps> = ({
-	variant = 'text',
+	variant = 'default',
 	dimmed,
 	gradient,
 	span,
@@ -27,6 +29,7 @@ const Text: FC<TextProps> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -48,6 +51,7 @@ const Text: FC<TextProps> = ({
 }) => {
 	const componentId = id || 'Text';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,
@@ -69,6 +73,8 @@ const Text: FC<TextProps> = ({
 
 	const Component = component || (span ? 'span' : 'div');
 
+	const isStyled = variant !== 'unstyled';
+
 	let sizeClass = '';
 	if (size === 'xs') sizeClass = 'text-xs';
 	if (size === 'sm') sizeClass = 'text-sm';
@@ -84,12 +90,15 @@ const Text: FC<TextProps> = ({
 
 	const alignClass = align ? `text-${align}` : '';
 
-	let variantClass = 'text-zinc-900 dark:text-zinc-100';
-	if (dimmed) variantClass = 'text-zinc-500 dark:text-zinc-400';
-	if (variant === 'link')
-		variantClass = 'text-blue-600 hover:underline cursor-pointer';
-	if (variant === 'gradient' && gradient) {
-		variantClass = `bg-gradient-to-r from-${gradient.from}-500 to-${gradient.to}-500 bg-clip-text text-transparent`;
+	let variantClass = '';
+	if (isStyled) {
+		variantClass = 'text-zinc-900 dark:text-zinc-100';
+		if (dimmed) variantClass = 'text-zinc-500 dark:text-zinc-400';
+		if (variant === 'link')
+			variantClass = 'text-blue-600 hover:underline cursor-pointer';
+		if (variant === 'gradient' && gradient) {
+			variantClass = `bg-gradient-to-r from-${gradient.from}-500 to-${gradient.to}-500 bg-clip-text text-transparent`;
+		}
 	}
 
 	const truncateClass = truncate ? 'truncate' : '';
@@ -98,7 +107,7 @@ const Text: FC<TextProps> = ({
 	return (
 		<Component
 			id={componentId}
-			className={`${sizeClass} ${fwClass} ${alignClass} ${variantClass} ${truncateClass} ${lineClampClass} ${stylingClasses} ${className}`}
+			className={`${sizeClass} ${fwClass} ${alignClass} ${variantClass} ${truncateClass} ${lineClampClass} ${stylingClasses} ${className}`.trim()}
 			{...props}
 		>
 			{children}

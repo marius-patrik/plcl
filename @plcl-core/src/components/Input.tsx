@@ -5,7 +5,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
  * Props for the Input component.
  */
 export interface InputProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'style'>,
 		StylingProps {
 	/** Visual style variant */
 	variant?: 'filled' | 'unstyled';
@@ -63,6 +63,7 @@ const Input: FC<InputProps> = ({
 	disabled,
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -84,6 +85,7 @@ const Input: FC<InputProps> = ({
 }) => {
 	const componentId = id || 'Input';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

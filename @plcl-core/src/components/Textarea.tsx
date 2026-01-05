@@ -2,7 +2,7 @@ import type { FC, TextareaHTMLAttributes } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface TextareaProps
-	extends TextareaHTMLAttributes<HTMLTextAreaElement>,
+	extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'style'>,
 		StylingProps {
 	variant?: 'filled' | 'unstyled';
 	error?: boolean | React.ReactNode;
@@ -21,6 +21,7 @@ const Textarea: FC<TextareaProps> = ({
 	disabled,
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -42,6 +43,7 @@ const Textarea: FC<TextareaProps> = ({
 }) => {
 	const componentId = id || 'Textarea';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

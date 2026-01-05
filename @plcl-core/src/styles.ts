@@ -11,7 +11,7 @@ export type Variant =
 	| 'unstyled';
 
 export interface StylingProps {
-	variant?: Variant | string; // Allow string for component-specific variants
+	style?: Variant | string; // Allow string for component-specific styles
 	m?: Spacing;
 	mt?: Spacing;
 	mb?: Spacing;
@@ -78,20 +78,20 @@ const variantStyles: Record<Variant, string> = {
 export function getStylingClasses(props: StylingProps): string {
 	const classes: string[] = [];
 
-	// Get variant (default to 'glass')
+	// Get variant (default to 'glass' if not provided)
 	// Handle component-specific variants by mapping to base variants
 	let variant: Variant = 'glass';
-	if (typeof props.variant === 'string') {
+	if (typeof props.style === 'string') {
 		// Map component-specific variants to base variants
 		if (
-			props.variant === 'glass' ||
-			props.variant === 'glass-highlight' ||
-			props.variant === 'flat' ||
-			props.variant === 'outline' ||
-			props.variant === 'transparent' ||
-			props.variant === 'unstyled'
+			props.style === 'glass' ||
+			props.style === 'glass-highlight' ||
+			props.style === 'flat' ||
+			props.style === 'outline' ||
+			props.style === 'transparent' ||
+			props.style === 'unstyled'
 		) {
-			variant = props.variant as Variant;
+			variant = props.style as Variant;
 		} else {
 			// For other variants (like 'filled', 'icon', 'text'), default to glass
 			variant = 'glass';

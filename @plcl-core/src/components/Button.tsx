@@ -2,21 +2,6 @@ import type { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 import { Link as WouterLink } from 'wouter';
 import { type StylingProps, getStylingClasses } from '../styles';
 
-/**
- * Available button style variants.
- * - `glass` - Glassmorphism style with blur effect (default)
- * - `glass-highlight` - Highlighted glass style for primary actions
- * - `icon` - Icon-only button with scale animation
- * - `text` - Text-only button without background
- * - `outline` - Bordered button without fill
- */
-export type ButtonVariant =
-	| 'glass'
-	| 'glass-highlight'
-	| 'icon'
-	| 'text'
-	| 'outline';
-
 /** Button render type - either a button element or a link */
 export type ButtonType = 'button' | 'link';
 
@@ -24,10 +9,8 @@ export type ButtonType = 'button' | 'link';
  * Props for the Button component.
  */
 export interface ButtonProps
-	extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>,
+	extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'style'>,
 		StylingProps {
-	/** Visual style variant */
-	variant?: ButtonVariant;
 	/** Render as button or link element */
 	as?: ButtonType;
 	/** URL for link variant (when as="link") */
@@ -37,8 +20,8 @@ export interface ButtonProps
 /**
  * Button - A versatile button component with glassmorphism styling.
  *
- * Supports multiple visual variants and can render as either a button or link element.
- * Includes full support for StylingProps for margin, padding, radius, and shadow customization.
+ * Uses StylingProps for consistent styling across all components.
+ * Can render as either a button or link element.
  *
  * @example Basic usage
  * ```tsx
@@ -47,12 +30,12 @@ export interface ButtonProps
  *
  * @example Primary action button
  * ```tsx
- * <Button variant="glass-highlight">Submit</Button>
+ * <Button style="glass-highlight">Submit</Button>
  * ```
  *
- * @example Icon button
+ * @example Unstyled button
  * ```tsx
- * <Button variant="icon"><IconSettings /></Button>
+ * <Button style="unstyled">Plain Button</Button>
  * ```
  *
  * @example Link button
@@ -66,7 +49,7 @@ export interface ButtonProps
  * ```
  */
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
-	variant = 'glass',
+	style = 'glass',
 	as = 'button',
 	href = '',
 	children,
@@ -93,17 +76,10 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	...props
 }) => {
 	const componentId = id || 'Button';
-	// Map ButtonVariant to StylingProps variant
-	let stylingVariant: 'glass' | 'glass-highlight' | 'outline' | 'transparent' =
-		'glass';
-	if (variant === 'glass-highlight') stylingVariant = 'glass-highlight';
-	else if (variant === 'outline') stylingVariant = 'outline';
-	else if (variant === 'text' || variant === 'icon')
-		stylingVariant = 'transparent';
 
-	// Generate utility classes
+	// Generate utility classes using StylingProps
 	const stylingClasses = getStylingClasses({
-		variant: stylingVariant,
+		style,
 		m,
 		mt,
 		mb,
@@ -120,37 +96,10 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 		py,
 		radius,
 		shadow,
+		size,
 	});
 
-	// Additional variant-specific classes
-	let variantClasses = '';
-	if (variant === 'icon') {
-		variantClasses = 'hover:scale-101 active:scale-101 transition-transform';
-	} else if (variant === 'text') {
-		variantClasses =
-			'hover:text-zinc-900 active:text-zinc-900 dark:hover:text-zinc-100 dark:active:text-zinc-100 text-sky-500 dark:text-sky-400';
-	} else if (variant === 'outline') {
-		variantClasses =
-			'hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors';
-	}
-
-	// Size adjustments (if `size` affects button scale specifically beyond padding)
-	const sizeClasses = size ? `btn-${size}` : '';
-	// Note: We might need to define these btn-* classes in CSS or handle them here.
-	// For now, let's assume 'p' props handle spacing, but we can add text sizing:
-	let dynamicSize = '';
-	if (size === 'xs') dynamicSize = 'text-xs px-2 py-1';
-	if (size === 'sm') dynamicSize = 'text-sm px-3 py-1.5';
-	if (size === 'md') dynamicSize = 'text-base px-4 py-2';
-	if (size === 'lg') dynamicSize = 'text-lg px-6 py-3';
-	if (size === 'xl') dynamicSize = 'text-xl px-8 py-4';
-
-	// If specific padding props are provided, they override the size default padding
-	if (p || px || py || pt || pb || pl || pr) {
-		dynamicSize = dynamicSize.replace(/p[xyltrb]?-\S+/g, '');
-	}
-
-	const styles = `${variantClasses} ${stylingClasses} ${dynamicSize} ${sizeClasses} ${className}`;
+	const styles = `${stylingClasses} ${className}`;
 
 	if (as === 'link') {
 		return (

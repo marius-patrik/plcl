@@ -26,6 +26,8 @@ Project-specific instructions and standards. Update this file whenever the user 
 - ✅ Use `FC<Props>` type for component definitions
 - ✅ Components should support `className` prop for customization
 - ⚠️ Use `PropsWithChildren` when component accepts children
+- ✅ **No native HTML components** - Use core components from `@plcl/core` instead of native HTML elements (e.g., use `Button` instead of `<button>`, `Text` instead of `<p>`, etc.)
+  - Exception: Core library (`@plcl-core`) may use native components as building blocks
 
 ### Imports
 

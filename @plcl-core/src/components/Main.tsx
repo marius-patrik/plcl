@@ -17,12 +17,14 @@ const Main: FC<PropsWithChildren<MainProps>> = ({
 	const baseStyles = 'w-full';
 
 	const variantStyles = {
-		app: 'flex flex-col px-2 gap-2 grow h-full',
+		app: isScrollable
+			? 'flex flex-col px-2 gap-2 flex-1 overflow-y-auto'
+			: 'flex flex-col px-2 gap-2 flex-1 overflow-hidden',
 		desktop: 'relative z-10 w-full h-full p-4 block',
 		page: isScrollable
 			? 'flex-1 w-full overflow-y-auto'
 			: 'flex-1 w-full overflow-hidden',
-		sidebar: 'flex-1 overflow-y-auto',
+		sidebar: isScrollable ? 'flex-1 overflow-y-auto' : 'flex-1 overflow-hidden',
 	};
 
 	const containerStyles = {

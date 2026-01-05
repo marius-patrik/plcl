@@ -2,7 +2,7 @@ import type { ChangeEvent, FC, InputHTMLAttributes, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface SliderProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'style'>,
 		StylingProps {
 	color?: string;
 	label?: ReactNode; // Tooltip label content? Or surrounding label?
@@ -22,6 +22,7 @@ const Slider: FC<SliderProps> = ({
 	value,
 	defaultValue,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -42,6 +43,7 @@ const Slider: FC<SliderProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

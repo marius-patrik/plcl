@@ -2,18 +2,22 @@ import type { ElementType, FC, HTMLAttributes, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export type TitleOrder = 1 | 2 | 3 | 4 | 5 | 6;
+export type TitleVariant = 'default' | 'unstyled';
 
 export interface TitleProps
-	extends HTMLAttributes<HTMLHeadingElement>,
+	extends Omit<HTMLAttributes<HTMLHeadingElement>, 'style'>,
 		StylingProps {
 	order?: TitleOrder;
+	variant?: TitleVariant;
 }
 
 const Title: FC<TitleProps> = ({
 	order = 1,
 	children,
 	className = '',
+	variant = 'default',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -34,6 +38,7 @@ const Title: FC<TitleProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,
@@ -55,22 +60,25 @@ const Title: FC<TitleProps> = ({
 
 	const Component = `h${order}` as ElementType;
 
-	let sizeClass = '';
-	// Mantine defaults: h1=34px, h2=26px, h3=22px, h4=18px, h5=16px, h6=14px
-	if (order === 1) sizeClass = 'text-4xl font-bold tracking-tight'; // ~36px
-	if (order === 2) sizeClass = 'text-3xl font-bold tracking-tight'; // ~30px
-	if (order === 3) sizeClass = 'text-2xl font-bold'; // ~24px
-	if (order === 4) sizeClass = 'text-xl font-bold'; // ~20px
-	if (order === 5) sizeClass = 'text-lg font-bold'; // ~18px
-	if (order === 6) sizeClass = 'text-base font-bold'; // ~16px
+	const isDefault = variant === 'default';
 
-	// Override with size prop if provided? Usually Title ignores size prop in favor of order,
-	// unless size is explicitly passed to override.
-	// We'll let `size` prop override classes if stylingClasses appear last.
+	let sizeClass = '';
+	let colorClass = '';
+
+	if (isDefault) {
+		// Mantine defaults: h1=34px, h2=26px, h3=22px, h4=18px, h5=16px, h6=14px
+		if (order === 1) sizeClass = 'text-4xl font-bold tracking-tight'; // ~36px
+		if (order === 2) sizeClass = 'text-3xl font-bold tracking-tight'; // ~30px
+		if (order === 3) sizeClass = 'text-2xl font-bold'; // ~24px
+		if (order === 4) sizeClass = 'text-xl font-bold'; // ~20px
+		if (order === 5) sizeClass = 'text-lg font-bold'; // ~18px
+		if (order === 6) sizeClass = 'text-base font-bold'; // ~16px
+		colorClass = 'text-zinc-900 dark:text-zinc-100';
+	}
 
 	return (
 		<Component
-			className={`${sizeClass} text-zinc-900 dark:text-zinc-100 ${stylingClasses} ${className}`}
+			className={`${sizeClass} ${colorClass} ${stylingClasses} ${className}`.trim()}
 			{...props}
 		>
 			{children}

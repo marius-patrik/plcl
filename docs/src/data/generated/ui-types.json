@@ -1,0 +1,170 @@
+[
+  {
+    "name": "DesktopProps",
+    "kind": "interface",
+    "description": "DesktopProps interface",
+    "properties": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/desktop.ts"
+  },
+  {
+    "name": "DesktopLayout",
+    "kind": "interface",
+    "description": "DesktopLayout interface",
+    "properties": [
+      {
+        "name": "columns",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "description": "",
+        "required": true
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/desktop.ts"
+  },
+  {
+    "name": "WindowProps",
+    "kind": "interface",
+    "description": "WindowProps interface",
+    "properties": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "handleClose",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onFocus",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "resetKey",
+        "type": "number",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/window.ts"
+  },
+  {
+    "name": "WindowManagerProps",
+    "kind": "interface",
+    "description": "WindowManagerProps interface",
+    "properties": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/window.ts"
+  },
+  {
+    "name": "AppWindowProps",
+    "kind": "interface",
+    "description": "AppWindowProps interface",
+    "properties": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "handleClose",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onFocus",
+        "type": "() => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "resetKey",
+        "type": "number",
+        "description": "",
+        "required": false
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/window.ts"
+  },
+  {
+    "name": "AppDefinition",
+    "kind": "interface",
+    "description": "AppDefinition interface",
+    "properties": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "Component",
+        "type": "React.ComponentType<import(\"/Users/user/Documents/VSCodeProjects/projects/plcl/@plcl-ui-types/src/window\").AppWindowProps>",
+        "description": "",
+        "required": true
+      }
+    ],
+    "sourceFile": "/@plcl-ui-types/src/window.ts"
+  }
+]

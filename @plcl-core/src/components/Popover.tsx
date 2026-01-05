@@ -27,6 +27,7 @@ const Popover: FC<PopoverProps> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -88,6 +89,7 @@ const Popover: FC<PopoverProps> = ({
 	}, [isOpened, close]);
 
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

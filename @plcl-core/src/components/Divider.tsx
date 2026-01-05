@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface DividerProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	orientation?: 'horizontal' | 'vertical';
 	label?: ReactNode;
@@ -17,6 +17,7 @@ const Divider: FC<DividerProps> = ({
 	color,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -37,6 +38,7 @@ const Divider: FC<DividerProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

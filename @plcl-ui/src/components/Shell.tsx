@@ -358,7 +358,7 @@ const ShellComponent: FC<PropsWithChildren<ShellProps>> = ({
       <NavigationMenu
         items={navItems}
         defaultActiveId={currentPageId}
-        onItemChange={(id) => {
+        onItemChange={(id: string) => {
           setCurrentPageId(id);
         }}
         variant={navVariant}
@@ -594,12 +594,9 @@ const ShellComponent: FC<PropsWithChildren<ShellProps>> = ({
   if (variant === "app") {
     return (
       <ThemeProvider>
-        <div className="h-screen w-screen overflow-y-scroll overflow-x-hidden">
+        <div className="flex flex-col h-screen w-full overflow-hidden text-slate-900 dark:text-slate-100 transition-colors duration-300 shell-bg">
           {finalHeader && (
-            <>
               <Header variant={finalHeaderVariant}>{finalHeader}</Header>
-              <div className="h-16 md:h-18" />
-            </>
           )}
 
           <Main variant={finalMainVariant} isScrollable={finalIsMainScrollable}>
@@ -607,9 +604,7 @@ const ShellComponent: FC<PropsWithChildren<ShellProps>> = ({
           </Main>
 
           {finalFooter && (
-            <div className="mx-auto">
               <Footer variant={finalFooterVariant}>{finalFooter}</Footer>
-            </div>
           )}
         </div>
       </ThemeProvider>
@@ -620,12 +615,14 @@ const ShellComponent: FC<PropsWithChildren<ShellProps>> = ({
   if (variant === "sidebar") {
     return (
       <ThemeProvider>
-        <div className="flex h-screen w-full text-slate-900 dark:text-slate-100 transition-colors duration-300 shell-bg">
+        <div className="flex h-screen w-screen fixed inset-0 overflow-hidden text-slate-900 dark:text-slate-100 transition-colors duration-300 shell-bg">
           {finalSidebar && (
+            <div className="h-full flex-shrink-0">
             <Sidebar isScrollable={isSidebarScrollable}>{finalSidebar}</Sidebar>
+            </div>
           )}
 
-          <div className="flex flex-col flex-1 min-w-0">
+          <div className="flex flex-col flex-1 min-w-0 h-full overflow-hidden">
             {finalHeader && (
               <Header variant={finalHeaderVariant}>{finalHeader}</Header>
             )}
@@ -649,7 +646,7 @@ const ShellComponent: FC<PropsWithChildren<ShellProps>> = ({
   // Page variant (default)
   return (
     <ThemeProvider>
-      <div className="flex flex-col h-screen w-full text-slate-900 dark:text-slate-100 transition-colors duration-300 shell-bg">
+      <div className="flex flex-col h-screen w-full overflow-hidden text-slate-900 dark:text-slate-100 transition-colors duration-300 shell-bg">
         {finalHeader && (
           <Header variant={finalHeaderVariant}>{finalHeader}</Header>
         )}

@@ -5,7 +5,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
  * Props for the Checkbox component.
  */
 export interface CheckboxProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'style'>,
 		StylingProps {
 	/** Label displayed next to the checkbox */
 	label?: ReactNode;
@@ -60,6 +60,7 @@ const Checkbox: FC<CheckboxProps> = ({
 	id,
 	disabled,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -80,6 +81,7 @@ const Checkbox: FC<CheckboxProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

@@ -9,13 +9,17 @@ PLC UI Types provides TypeScript type definitions for the PLC UI desktop library
 ## Installation
 
 ```bash
-npm install plc-ui-types
+npm install @plcl/ui-types
 ```
 
 ## Usage
 
 ```typescript
-import type { DesktopProps, WindowProps } from "plc-ui-types";
+import type { 
+  AppDefinition, 
+  AppWindowProps,
+  WindowProps 
+} from "@plcl/ui-types";
 ```
 
 ## Development

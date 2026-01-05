@@ -90,7 +90,7 @@ export const Search = ({
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-start justify-center pt-32 pointer-events-auto">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-32 pointer-events-auto">
       {/* Backdrop */}
       <button
         type="button"

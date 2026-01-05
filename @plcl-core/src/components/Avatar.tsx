@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface AvatarProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	src?: string;
 	alt?: string;
@@ -16,6 +16,7 @@ const Avatar: FC<PropsWithChildren<AvatarProps>> = ({
 	children,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -36,6 +37,7 @@ const Avatar: FC<PropsWithChildren<AvatarProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

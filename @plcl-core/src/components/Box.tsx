@@ -3,7 +3,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
 import Text from './Text';
 
 export interface BoxProps
-	extends Omit<HTMLAttributes<HTMLDivElement>, 'title'>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'style'>,
 		StylingProps {
 	title?: ReactNode;
 	buttons?: ReactNode;
@@ -16,6 +16,7 @@ const Box: FC<PropsWithChildren<BoxProps>> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'glass',
 	m,
 	mt,
 	mb,
@@ -37,7 +38,7 @@ const Box: FC<PropsWithChildren<BoxProps>> = ({
 }) => {
 	const componentId = id || 'Box';
 	const stylingClasses = getStylingClasses({
-		variant: 'glass',
+		style,
 		m,
 		mt,
 		mb,

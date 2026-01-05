@@ -3,28 +3,11 @@ import { type StylingProps, getStylingClasses } from '../styles';
 import Text from './Text';
 
 /**
- * Available card style variants.
- * - `glass` - Glassmorphism style with blur effect (default)
- * - `glass-highlight` - Highlighted glass style for emphasis
- * - `flat` - Solid background without glass effect
- * - `outline` - Bordered card without fill
- * - `unstyled` - No default styling applied
- */
-export type CardVariant =
-	| 'glass'
-	| 'glass-highlight'
-	| 'flat'
-	| 'outline'
-	| 'unstyled';
-
-/**
  * Props for the Card component.
  */
 export interface CardProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
-	/** Visual style variant */
-	variant?: CardVariant;
 	/** Content to display in the card header */
 	header?: React.ReactNode;
 	/** Content to display in the card footer */
@@ -53,19 +36,19 @@ export interface CardProps
  *
  * @example Outlined card
  * ```tsx
- * <Card variant="outline" p="lg">
+ * <Card style="outline" p="lg">
  *   <p>Outlined card</p>
  * </Card>
  * ```
  */
 const Card: FC<PropsWithChildren<CardProps>> = ({
-	variant = 'glass',
 	header,
 	footer,
 	children,
 	className = '',
 	id,
 	// Styling props
+	style = 'glass',
 	m,
 	mt,
 	mb,
@@ -87,7 +70,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
 }) => {
 	const componentId = id || 'Card';
 	const stylingClasses = getStylingClasses({
-		variant,
+		style,
 		m,
 		mt,
 		mb,
@@ -109,9 +92,9 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
 	// Handle size for Card if needed (e.g., padding/spacing scale)
 	// Default padding is p-3 gap-2.
 	// If size is provided, we can scale these.
-	// Skip default padding for unstyled variant
+	// Skip default padding for unstyled style
 	let sizeClasses = '';
-	if (size && variant !== 'unstyled') {
+	if (size && style !== 'unstyled') {
 		if (size === 'xs') sizeClasses = 'p-1 gap-1 text-xs';
 		if (size === 'sm') sizeClasses = 'p-2 gap-1.5 text-sm';
 		if (size === 'md') sizeClasses = 'p-3 gap-2 text-base';
@@ -125,7 +108,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
 	}
 
 	const defaultPadding =
-		variant !== 'unstyled' &&
+		style !== 'unstyled' &&
 		!size &&
 		!p &&
 		!px &&
@@ -140,7 +123,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
 	return (
 		<div
 			id={componentId}
-			className={`${stylingClasses} ${variant !== 'unstyled' ? sizeClasses : ''} ${defaultPadding} flex flex-col ${className}`}
+			className={`${stylingClasses} ${style !== 'unstyled' ? sizeClasses : ''} ${defaultPadding} flex flex-col ${className}`}
 			{...props}
 		>
 			{header && (

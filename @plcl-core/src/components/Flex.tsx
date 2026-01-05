@@ -7,7 +7,7 @@ export type FlexAlign = 'start' | 'center' | 'end' | 'stretch';
 export type FlexGap = Spacing | 'none'; // Use Spacing from utils + none
 
 export interface FlexProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	direction?: FlexDirection;
 	justify?: FlexJustify;
@@ -56,6 +56,7 @@ const Flex: FC<PropsWithChildren<FlexProps>> = ({
 	children,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -76,6 +77,7 @@ const Flex: FC<PropsWithChildren<FlexProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

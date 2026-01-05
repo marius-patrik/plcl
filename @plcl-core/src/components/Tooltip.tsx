@@ -20,6 +20,7 @@ const Tooltip: FC<TooltipProps> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -45,6 +46,7 @@ const Tooltip: FC<TooltipProps> = ({
 	const isVisible = opened !== undefined ? opened : hovered;
 
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

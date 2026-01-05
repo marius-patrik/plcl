@@ -92,7 +92,7 @@ const Header: FC<PropsWithChildren<HeaderProps>> = ({
 			{canShowToggle && (
 				<div className="ml-auto">
 					<Button
-						variant="icon"
+						style="unstyled"
 						onClick={handleThemeToggle}
 						title={
 							themeContext.theme === 'dark'

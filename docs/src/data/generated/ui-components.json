@@ -1,0 +1,465 @@
+[
+  {
+    "name": "Apps",
+    "category": "UI",
+    "description": "DesktopIcons - Renders draggable app icons on the desktop.\n\nThis component displays all registered apps as draggable icons on the desktop surface.\nFeatures include:\n\n- Drag and drop to reposition icons\n- Click to launch apps\n- Keyboard navigation (Enter/Space to launch)\n- Respects icon size preference (small/large)\n- Shows/hides titles based on user preference\n\nThis component is used internally by Shell's desktop variant.",
+    "props": [],
+    "examples": [
+      {
+        "title": "Example",
+        "code": "<Desktop>\n  <DesktopIcons openApp={openApp} />\n</Desktop>"
+      }
+    ],
+    "sourceFile": "/@plcl-ui/src/components/Apps.tsx"
+  },
+  {
+    "name": "Desktop",
+    "category": "UI",
+    "description": "Desktop component",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "description": "",
+        "required": true
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-ui/src/components/Desktop.tsx"
+  },
+  {
+    "name": "IFrameApp",
+    "category": "UI",
+    "description": "Reusable component for wrapping standalone web apps with an iframe inside a Window.\nEnables external apps to run within the desktop environment.",
+    "props": [
+      {
+        "name": "url",
+        "type": "string",
+        "description": "URL of the external app to embed",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "description": "Title displayed in the window header",
+        "required": true
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "description": "Icon displayed next to the title",
+        "required": true
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-ui/src/components/IFrameApp.tsx"
+  },
+  {
+    "name": "Search",
+    "category": "UI",
+    "description": "Search - A spotlight-style search overlay for finding and launching apps.\n\nThe Search component provides a quick way to find and launch applications\nin the desktop environment. Features include:\n\n- Real-time filtering as you type\n- Shows running state for open apps\n- Click to open new app or focus existing window\n- Escape key to close\n- Backdrop click to close\n\nThis component is used internally by Shell's desktop variant.",
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "description": "Whether the search overlay is open",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "Callback to close the search overlay",
+        "required": true
+      },
+      {
+        "name": "appStates",
+        "type": "Record<string, boolean>",
+        "description": "Map of app IDs to their open state",
+        "required": true
+      },
+      {
+        "name": "openApp",
+        "type": "(id: string) => void",
+        "description": "Callback to open an app by ID",
+        "required": true
+      },
+      {
+        "name": "focusApp",
+        "type": "Record<string, () => void>",
+        "description": "Map of app IDs to their focus functions",
+        "required": true
+      },
+      {
+        "name": "apps",
+        "type": "AppDefinition[]",
+        "description": "List of available apps to search",
+        "required": true
+      }
+    ],
+    "examples": [
+      {
+        "title": "Example",
+        "code": "<Search\n  open={searchOpen}\n  onClose={() => setSearchOpen(false)}\n  appStates={windowStates}\n  openApp={openApp}\n  focusApp={focusFunctions}\n  apps={allApps}\n/>"
+      }
+    ],
+    "sourceFile": "/@plcl-ui/src/components/Search.tsx"
+  },
+  {
+    "name": "Settings",
+    "category": "UI",
+    "description": "Settings - Desktop environment settings application.\n\nA built-in settings app that allows users to customize the desktop experience:\n\n- **Icon Size**: Choose between small (with titles) or large (without titles) icons\n- **Theme**: Light, dark, or system preference\n- **Dock**: Show or auto-hide the dock\n- **Desktop Layout**: Grid snap or free placement for icons\n- **Wallpaper**: Choose from color presets or upload a custom image\n\nThis component is automatically included in Shell's desktop variant.",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "Whether the settings window is open",
+        "required": true
+      },
+      {
+        "name": "handleClose",
+        "type": "() => void",
+        "description": "Callback when the window is closed",
+        "required": true
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "description": "Z-index for window stacking",
+        "required": true
+      },
+      {
+        "name": "onFocus",
+        "type": "() => void",
+        "description": "Callback when window receives focus",
+        "required": true
+      },
+      {
+        "name": "resetKey",
+        "type": "number",
+        "description": "Key to reset window position/size",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Example",
+        "code": "<Settings\n  isOpen={settingsOpen}\n  handleClose={() => setSettingsOpen(false)}\n  zIndex={zIndex}\n  onFocus={bringToFront}\n/>"
+      }
+    ],
+    "sourceFile": "/@plcl-ui/src/components/Settings.tsx"
+  },
+  {
+    "name": "Shell",
+    "category": "UI",
+    "description": "Shell.Item - Defines a page within the Shell component.\nUsed as children of Shell to create navigable pages.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "ShellVariant",
+        "description": "The layout variant to use",
+        "required": true
+      },
+      {
+        "name": "backgroundImage",
+        "type": "string",
+        "description": "Background image URL (desktop variant)",
+        "required": false
+      },
+      {
+        "name": "backgroundOverlay",
+        "type": "string",
+        "description": "CSS class for background overlay (desktop variant)",
+        "required": false
+      },
+      {
+        "name": "customApps",
+        "type": "AppDefinition[]",
+        "description": "Custom apps to display in the desktop environment (desktop variant)",
+        "required": false
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "description": "URL to embed in iframe (web variant)",
+        "required": false
+      },
+      {
+        "name": "webTitle",
+        "type": "string",
+        "description": "Title for the iframe (web variant)",
+        "required": false
+      },
+      {
+        "name": "windowTitle",
+        "type": "ReactNode",
+        "description": "Title displayed in window header (window variant)",
+        "required": false
+      },
+      {
+        "name": "windowHandleClose",
+        "type": "() => void",
+        "description": "Callback when window is closed (window variant)",
+        "required": false
+      },
+      {
+        "name": "windowIsOpen",
+        "type": "boolean",
+        "description": "Whether the window is open (window variant)",
+        "required": false
+      },
+      {
+        "name": "windowZIndex",
+        "type": "number",
+        "description": "Z-index for window stacking (window variant)",
+        "required": false
+      },
+      {
+        "name": "windowOnFocus",
+        "type": "() => void",
+        "description": "Callback when window receives focus (window variant)",
+        "required": false
+      },
+      {
+        "name": "windowResetKey",
+        "type": "number",
+        "description": "Key to reset window position/size (window variant)",
+        "required": false
+      },
+      {
+        "name": "headerVariant",
+        "type": "HeaderVariant",
+        "description": "Header component variant override",
+        "required": false
+      },
+      {
+        "name": "footerVariant",
+        "type": "FooterVariant",
+        "description": "Footer component variant override",
+        "required": false
+      },
+      {
+        "name": "mainVariant",
+        "type": "MainVariant",
+        "description": "Main content area variant override",
+        "required": false
+      },
+      {
+        "name": "headerContent",
+        "type": "ReactNode",
+        "description": "Content to render inside the header",
+        "required": false
+      },
+      {
+        "name": "footerContent",
+        "type": "ReactNode",
+        "description": "Content to render inside the footer",
+        "required": false
+      },
+      {
+        "name": "mainContent",
+        "type": "ReactNode",
+        "description": "Content to render in the main area",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "ReactNode",
+        "description": "Full header component override",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "description": "Full footer component override",
+        "required": false
+      },
+      {
+        "name": "main",
+        "type": "ReactNode",
+        "description": "Full main content component override",
+        "required": false
+      },
+      {
+        "name": "sidebar",
+        "type": "ReactNode",
+        "description": "Sidebar component (sidebar variant)",
+        "required": false
+      },
+      {
+        "name": "sidebarContent",
+        "type": "ReactNode",
+        "description": "Alias for sidebar prop",
+        "required": false
+      },
+      {
+        "name": "menuItems",
+        "type": "NavigationMenuItem[]",
+        "description": "Navigation menu items (legacy)",
+        "required": false
+      },
+      {
+        "name": "pages",
+        "type": "Record<string, ReactNode>",
+        "description": "Page content map keyed by page ID (legacy)",
+        "required": false
+      },
+      {
+        "name": "defaultPageId",
+        "type": "string",
+        "description": "Default active page ID (legacy)",
+        "required": false
+      },
+      {
+        "name": "onPageChange",
+        "type": "(pageId: string) => void",
+        "description": "Callback when active page changes",
+        "required": false
+      },
+      {
+        "name": "navigationItems",
+        "type": "NavigationMenuItem[]",
+        "description": "Navigation menu items",
+        "required": false
+      },
+      {
+        "name": "defaultActivePageId",
+        "type": "string",
+        "description": "Default active page ID",
+        "required": false
+      },
+      {
+        "name": "isMainScrollable",
+        "type": "boolean",
+        "description": "Whether main content area is scrollable",
+        "required": false
+      },
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "Alias for isMainScrollable",
+        "required": false
+      },
+      {
+        "name": "isSidebarScrollable",
+        "type": "boolean",
+        "description": "Whether sidebar is scrollable (sidebar variant)",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Example",
+        "code": "<Shell variant=\"page\">\n  <Shell.Item id=\"home\" title=\"Home\">\n    <HomePage />\n  </Shell.Item>\n  <Shell.Item id=\"settings\" title=\"Settings\">\n    <SettingsPage />\n  </Shell.Item>\n</Shell>"
+      }
+    ],
+    "sourceFile": "/@plcl-ui/src/components/Shell.tsx"
+  },
+  {
+    "name": "Wallpaper",
+    "category": "UI",
+    "description": "Wallpaper component",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "description": "",
+        "required": true
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-ui/src/components/Wallpaper.tsx"
+  },
+  {
+    "name": "Window",
+    "category": "UI",
+    "description": "Window - A draggable, resizable window component with glassmorphism styling.\n\nFeatures:\n- Drag to move by clicking and dragging the title bar\n- Resize by dragging the bottom-right corner\n- Maximize to fill the viewport (below header)\n- Fullscreen mode to cover entire screen\n- Double-click title bar to maximize/restore\n- Close, maximize, and fullscreen buttons",
+    "props": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "description": "Title displayed in the window header",
+        "required": true
+      },
+      {
+        "name": "handleClose",
+        "type": "() => void",
+        "description": "Callback when the window close button is clicked",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "description": "Content to render inside the window",
+        "required": true
+      },
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "Whether the window is visible",
+        "required": true
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "description": "Z-index for window stacking order",
+        "required": true
+      },
+      {
+        "name": "onFocus",
+        "type": "() => void",
+        "description": "Callback when the window receives focus",
+        "required": true
+      },
+      {
+        "name": "resetKey",
+        "type": "number",
+        "description": "Key to reset window position and size to defaults",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic usage",
+        "code": "<Window\ntitle=\"My Window\"\nisOpen={isOpen}\nhandleClose={() => setIsOpen(false)}\nzIndex={1}\nonFocus={() => bringToFront()}\n>\n<div>Window content here</div>\n</Window>"
+      },
+      {
+        "title": "With custom title",
+        "code": "<Window\ntitle={<span><Icon /> My App</span>}\nisOpen={true}\nhandleClose={handleClose}\nzIndex={zIndex}\nonFocus={onFocus}\n>\n<AppContent />\n</Window>"
+      }
+    ],
+    "sourceFile": "/@plcl-ui/src/components/Window.tsx"
+  },
+  {
+    "name": "WindowManager",
+    "category": "UI",
+    "description": "WindowManager component",
+    "props": [
+      {
+        "name": "apps",
+        "type": "AppDefinition[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "openStates",
+        "type": "Record<string, boolean>",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "(id: string) => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onFocusReady",
+        "type": "(focusFunctions: Record<string, () => void>) => void",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-ui/src/components/WindowManager.tsx"
+  }
+]

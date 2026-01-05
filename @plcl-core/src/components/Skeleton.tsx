@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface SkeletonProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	visible?: boolean;
 	height?: number | string;
@@ -21,6 +21,7 @@ const Skeleton: FC<SkeletonProps> = ({
 	className = '',
 	id,
 	// Styling props
+	style: styleProp = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -42,6 +43,7 @@ const Skeleton: FC<SkeletonProps> = ({
 }) => {
 	const componentId = id || 'Skeleton';
 	const stylingClasses = getStylingClasses({
+		style: styleProp,
 		m,
 		mt,
 		mb,
@@ -62,10 +64,9 @@ const Skeleton: FC<SkeletonProps> = ({
 
 	if (!visible) return <>{children}</>;
 
-	const style = {
+	const inlineStyle = {
 		height: height,
 		width: width,
-		...props.style,
 	};
 
 	return (
@@ -78,7 +79,7 @@ const Skeleton: FC<SkeletonProps> = ({
                 ${stylingClasses} 
                 ${className}
             `}
-			style={style}
+			style={inlineStyle}
 			{...props}
 		>
 			{/* If children are present, we might want to overlay or wrap them. 

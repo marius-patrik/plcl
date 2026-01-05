@@ -9,7 +9,7 @@ import {
 export type StackGap = Spacing | 'none';
 
 export interface StackProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	gap?: StackGap;
 }
@@ -18,8 +18,8 @@ const Stack: FC<PropsWithChildren<StackProps>> = ({
 	gap = 'md',
 	children,
 	className = '',
-	variant,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -40,7 +40,7 @@ const Stack: FC<PropsWithChildren<StackProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
-		variant,
+		style,
 		m,
 		mt,
 		mb,

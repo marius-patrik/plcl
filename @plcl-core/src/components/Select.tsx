@@ -17,7 +17,7 @@ export interface SelectItem {
  * Props for the Select component.
  */
 export interface SelectProps
-	extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'>,
+	extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'style'>,
 		StylingProps {
 	/** Array of options - can be strings or SelectItem objects */
 	data?: (string | SelectItem)[];
@@ -79,6 +79,7 @@ const Select: FC<SelectProps> = ({
 	disabled,
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -100,6 +101,7 @@ const Select: FC<SelectProps> = ({
 }) => {
 	const componentId = id || 'Select';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

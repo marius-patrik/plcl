@@ -1,12 +1,15 @@
 import type { BlockquoteHTMLAttributes, FC, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
+export type BlockquoteVariant = 'default' | 'unstyled';
+
 export interface BlockquoteProps
-	extends BlockquoteHTMLAttributes<HTMLQuoteElement>,
+	extends Omit<BlockquoteHTMLAttributes<HTMLQuoteElement>, 'style'>,
 		StylingProps {
 	icon?: ReactNode;
 	cite?: string;
 	color?: string;
+	variant?: BlockquoteVariant;
 }
 
 const Blockquote: FC<BlockquoteProps> = ({
@@ -16,7 +19,9 @@ const Blockquote: FC<BlockquoteProps> = ({
 	children,
 	className = '',
 	id,
+	variant = 'default',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -37,7 +42,10 @@ const Blockquote: FC<BlockquoteProps> = ({
 	...props
 }) => {
 	const componentId = id || 'Blockquote';
+	const isDefault = variant === 'default';
+
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,
@@ -52,32 +60,37 @@ const Blockquote: FC<BlockquoteProps> = ({
 		pr,
 		px,
 		py,
-		radius: radius || 'xl',
+		radius: isDefault ? radius || 'xl' : radius,
 		shadow,
 	});
 
-	// Use padding default
-	const paddingClass = p || px || py || pt || pb || pl || pr ? '' : 'p-8';
+	// Use padding default only when styled
+	const paddingClass =
+		!isDefault || p || px || py || pt || pb || pl || pr ? '' : 'p-8';
 
-	const bgClass = 'bg-zinc-50 dark:bg-zinc-900';
+	const bgClass = isDefault ? 'bg-zinc-50 dark:bg-zinc-900' : '';
 
 	return (
 		<blockquote
 			id={componentId}
-			className={`relative ${bgClass} ${paddingClass} ${stylingClasses} ${className}`}
+			className={`relative ${bgClass} ${paddingClass} ${stylingClasses} ${className}`.trim()}
 			{...props}
 		>
-			{icon && (
+			{icon && isDefault && (
 				<div className="absolute top-0 left-0 -translate-y-1/2 translate-x-4 bg-white dark:bg-zinc-800 p-2 rounded-full shadow-sm text-zinc-400">
 					{icon}
 				</div>
 			)}
 
-			<div className="text-lg italic text-zinc-900 dark:text-zinc-100 leading-relaxed">
-				{children}
-			</div>
+			{isDefault ? (
+				<div className="text-lg italic text-zinc-900 dark:text-zinc-100 leading-relaxed">
+					{children}
+				</div>
+			) : (
+				children
+			)}
 
-			{cite && (
+			{cite && isDefault && (
 				<footer className="mt-3 text-sm text-zinc-500 font-semibold">
 					— {cite}
 				</footer>

@@ -51,6 +51,46 @@ The PLC Library monorepo is in active development with core architecture establi
 
 ---
 
+## 📋 Planned Next Steps (Aligned with v0.1.0 Milestone)
+
+### Priority 1: Complete Documentation Site
+1. **Interactive Component Examples** (🔄 In Progress)
+   - Add live, editable examples for all core components
+   - Show props and variants interactively
+   - Include code snippets for each example
+
+2. **Shell Component Documentation** (⚪ Not Started)
+   - Document all 6 Shell variants with examples
+   - Show use cases for each variant
+   - Include props reference
+
+3. **Custom Apps API Documentation** (⚪ Not Started)
+   - Complete guide on creating custom apps
+   - Example apps (Calculator, Notes, etc.)
+   - API reference for AppDefinition and AppWindowProps
+
+### Priority 2: Enhance Playground
+1. **Code Preview** (⚪ Not Started)
+   - Show code for each example
+   - Copy-to-clipboard functionality
+   - Syntax highlighting
+
+2. **Additional Examples** (⚪ Not Started)
+   - Layout components (Grid, Flex, Stack, etc.)
+   - Navigation components (Menu, NavigationMenu, etc.)
+   - Typography components (Text, Title, Code, etc.)
+
+### Priority 3: Quality Improvements
+1. **Code Quality** (⚪ Not Started)
+   - Review and improve component code
+   - Remove any remaining TODOs/FIXMEs
+   - Optimize performance where needed
+
+2. **Type Safety** (⚪ Not Started)
+   - Ensure all components have proper TypeScript types
+   - Fix any `any` types
+   - Add missing type exports
+
 ## 📋 Upcoming Tasks (Milestone v0.2.0)
 
 ### Desktop App Examples
@@ -133,5 +173,7 @@ The PLC Library monorepo is in active development with core architecture establi
 - Documentation is the critical path to completing both milestones
 - Build order: core-types → core → ui-types → ui → apps
 - All packages use npm workspaces for dependency management
+- Package documentation (README files) updated and synchronized
+- All package names standardized to `@plcl/*` format
 
 ---

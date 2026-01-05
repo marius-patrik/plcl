@@ -19,8 +19,8 @@
     "dev:docs": "cd docs && npm run dev",
     "dev:playground": "cd playground && npm run dev",
     "build": "npm run build:types && npm run build:lib && npm run build:docs",
-    "build:types": "cd @plcl-core-types && npm run build",
-    "build:lib": "cd @plcl-core && npm run build",
+    "build:types": "cd @plcl-core-types && npm run build && cd ../@plcl-ui-types && npm run build",
+    "build:lib": "cd @plcl-core && npm run build && cd ../@plcl-ui && npm run build",
     "build:docs": "cd docs && npm run build",
     "install:all": "find . -name 'node_modules' -type d -prune -exec rm -rf {} + && rm -f package-lock.json */package-lock.json && npm install",
     "format": "npm run format:types && npm run format:lib && npm run format:docs",
@@ -32,7 +32,7 @@
     "lint:lib": "cd @plcl-core && npm run lint",
     "lint:docs": "cd docs && npm run lint",
     "verify:build": "npm run build:types && npm run build:lib",
-    "verify:types": "cd @plcl-core-types && npm run build && cd ../@plcl-core && npm run build"
+    "verify:types": "npm run build:types"
   },
   "devDependencies": {
     "concurrently": "^9.1.0",

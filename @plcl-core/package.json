@@ -48,7 +48,7 @@
 	},
 	"dependencies": {
 		"@tabler/icons-react": "^3.0.0",
-		"@plcl/core-types": "file:../core-types",
+		"@plcl/core-types": "file:../@plcl-core-types",
 		"swr": "^2.3.8",
 		"wouter": "^3.9.0"
 	}

@@ -9,7 +9,7 @@ export interface SegmentedControlItem {
 }
 
 export interface SegmentedControlProps
-	extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'style'>,
 		StylingProps {
 	data: (string | SegmentedControlItem)[];
 	value?: string;
@@ -31,6 +31,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -52,6 +53,7 @@ const SegmentedControl: FC<SegmentedControlProps> = ({
 }) => {
 	const componentId = id || 'SegmentedControl';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

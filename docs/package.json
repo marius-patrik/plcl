@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
+    "extract-docs": "npx tsx scripts/extract-docs.ts",
+    "dev": "npm run extract-docs && rsbuild dev --open",
+    "build": "npm run extract-docs && rsbuild build",
     "preview": "rsbuild preview",
     "format": "biome format --write",
     "lint": "biome check --write",
@@ -18,7 +19,8 @@
     "@plcl/ui-types": "file:../@plcl-ui-types",
     "@tabler/icons-react": "^3.36.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "wouter": "^3.9.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
@@ -26,6 +28,7 @@
     "@rsbuild/plugin-react": "^1.4.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "ts-morph": "^24.0.0",
     "typescript": "^5.9.3"
   }
 }

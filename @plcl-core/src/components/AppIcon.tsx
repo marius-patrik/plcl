@@ -52,6 +52,7 @@ const AppIcon: FC<PropsWithChildren<AppIconProps>> = ({
 	onClick,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -71,6 +72,7 @@ const AppIcon: FC<PropsWithChildren<AppIconProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

@@ -47,6 +47,7 @@ const Accordion: FC<AccordionProps> & {
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -81,6 +82,7 @@ const Accordion: FC<AccordionProps> & {
 	};
 
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

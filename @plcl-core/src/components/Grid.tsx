@@ -10,7 +10,7 @@ export type GridCols = 1 | 2 | 3 | 4;
 export type GridGap = Spacing | 'none';
 
 export interface GridProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	cols?: GridCols;
 	gap?: GridGap;
@@ -29,6 +29,7 @@ const Grid: FC<PropsWithChildren<GridProps>> = ({
 	children,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -49,6 +50,7 @@ const Grid: FC<PropsWithChildren<GridProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

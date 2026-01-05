@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface BurgerProps
-	extends HTMLAttributes<HTMLButtonElement>,
+	extends Omit<HTMLAttributes<HTMLButtonElement>, 'style'>,
 		StylingProps {
 	opened: boolean;
 	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // override size type logic slightly
@@ -13,6 +13,7 @@ const Burger: FC<BurgerProps> = ({
 	className = '',
 	onClick,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -33,6 +34,7 @@ const Burger: FC<BurgerProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

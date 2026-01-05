@@ -4,7 +4,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
 export type AlertVariant = 'light' | 'filled' | 'outline' | 'transparent';
 
 export interface AlertProps
-	extends Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'color'>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'color' | 'style'>,
 		StylingProps {
 	title?: ReactNode;
 	variant?: AlertVariant;
@@ -32,6 +32,7 @@ const Alert: FC<PropsWithChildren<AlertProps>> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -53,6 +54,7 @@ const Alert: FC<PropsWithChildren<AlertProps>> = ({
 }) => {
 	const componentId = id || 'Alert';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

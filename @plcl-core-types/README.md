@@ -9,7 +9,7 @@ PLC Core Types provides TypeScript type definitions for the PLC Core component l
 ## Installation
 
 ```bash
-npm install plc-core-types
+npm install @plcl/core-types
 ```
 
 ## Usage
@@ -17,10 +17,9 @@ npm install plc-core-types
 ```typescript
 import type { 
   ButtonProps, 
-  CardProps, 
-  ShellProps,
-  WindowState 
-} from "plc-core-types";
+  CardProps,
+  StylingProps
+} from "@plcl/core-types";
 ```
 
 ## Available Types
@@ -63,7 +62,6 @@ import type {
 - `ProgressProps`
 - `LoadingProps`, `LoadingVariant`
 - `SkeletonProps`
-- `TabsProps`
 
 **Overlay & Navigation:**
 - `MenuProps`
@@ -95,18 +93,12 @@ import type {
 - `FooterProps`, `FooterVariant`
 - `MainProps`, `MainVariant`
 - `SidebarProps`
-- `ShellProps`, `ShellVariant`, `ShellItemProps`
 
 ### Navigation Types (`navigation.ts`)
 
 - `NavigationMenuProps`, `NavigationMenuItem`
 - `SidebarNavigationProps`, `SidebarNavigationItem`
 
-### Desktop Types (`desktop.ts`)
-
-- `WindowState` - Window position, size, and state management
-- `AppWindowProps` - Props for app window components
-- `AppDefinition` - App registration definition
 
 ## Development
 

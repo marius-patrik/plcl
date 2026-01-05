@@ -214,9 +214,9 @@ function Header() {
 }
 
 export default function App() {
-	return (
+  return (
 		<Shell variant="app" header={<Header />}>
 			<PlaygroundContent />
 		</Shell>
-	);
+  );
 }

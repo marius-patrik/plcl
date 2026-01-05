@@ -9,7 +9,7 @@ import {
 export type GroupGap = Spacing | 'none';
 
 export interface GroupProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	gap?: GroupGap;
 }
@@ -19,6 +19,7 @@ const Group: FC<PropsWithChildren<GroupProps>> = ({
 	children,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -39,6 +40,7 @@ const Group: FC<PropsWithChildren<GroupProps>> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

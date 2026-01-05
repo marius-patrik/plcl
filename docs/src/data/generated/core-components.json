@@ -1,0 +1,1552 @@
+[
+  {
+    "name": "Accordion",
+    "category": "Core",
+    "description": "Accordion component",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "Unique identifier",
+        "required": false
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "Controlled value - the ID of the currently open item",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "Default open item ID for uncontrolled usage",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "description": "Callback when the open item changes",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "description": "Accordion items (Accordion.Item components)",
+        "required": true
+      },
+      {
+        "name": "variant",
+        "type": "'default' | 'contained' | 'filled' | 'separated'",
+        "description": "Visual variant",
+        "required": false
+      },
+      {
+        "name": "radius",
+        "type": "Radius",
+        "description": "Border radius size",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "Additional CSS classes",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Accordion.tsx"
+  },
+  {
+    "name": "Alert",
+    "category": "Core",
+    "description": "Alert component",
+    "props": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "AlertVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withCloseButton",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Alert.tsx"
+  },
+  {
+    "name": "AppIcon",
+    "category": "Core",
+    "description": "AppIcon - A clickable app icon with glassmorphism styling.\n\nUsed for desktop icons and dock items in the desktop environment.\nDisplays an icon with optional name label and hover scale effect.",
+    "props": [],
+    "examples": [
+      {
+        "title": "Basic app icon",
+        "code": "<AppIcon\nname=\"Settings\"\nicon={<IconSettings size={32} />}\nonClick={() => openSettings()}\n/>"
+      },
+      {
+        "title": "Icon without title",
+        "code": "<AppIcon\nicon={<IconSearch size={24} />}\nshowTitle={false}\nonClick={openSearch}\n/>"
+      },
+      {
+        "title": "Different sizes",
+        "code": "<AppIcon name=\"Small\" icon={<Icon />} size=\"sm\" />\n<AppIcon name=\"Large\" icon={<Icon />} size=\"lg\" />"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/AppIcon.tsx"
+  },
+  {
+    "name": "Avatar",
+    "category": "Core",
+    "description": "Avatar component",
+    "props": [
+      {
+        "name": "src",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "initials",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Avatar.tsx"
+  },
+  {
+    "name": "Badge",
+    "category": "Core",
+    "description": "Badge component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "BadgeVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Badge.tsx"
+  },
+  {
+    "name": "Blockquote",
+    "category": "Core",
+    "description": "Blockquote component",
+    "props": [
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "cite",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "BlockquoteVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Blockquote.tsx"
+  },
+  {
+    "name": "Box",
+    "category": "Core",
+    "description": "Box component",
+    "props": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "buttons",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Box.tsx"
+  },
+  {
+    "name": "Burger",
+    "category": "Core",
+    "description": "Burger component",
+    "props": [
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "size",
+        "type": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Burger.tsx"
+  },
+  {
+    "name": "Button",
+    "category": "Core",
+    "description": "Button - A versatile button component with glassmorphism styling.\n\nSupports multiple visual variants and can render as either a button or link element.\nIncludes full support for StylingProps for margin, padding, radius, and shadow customization.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "ButtonVariant",
+        "description": "Visual style variant",
+        "required": false
+      },
+      {
+        "name": "as",
+        "type": "ButtonType",
+        "description": "Render as button or link element",
+        "required": false
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "description": "URL for link variant (when as=\"link\")",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic usage",
+        "code": "<Button>Click me</Button>"
+      },
+      {
+        "title": "Primary action button",
+        "code": "<Button variant=\"glass-highlight\">Submit</Button>"
+      },
+      {
+        "title": "Icon button",
+        "code": "<Button variant=\"icon\"><IconSettings /></Button>"
+      },
+      {
+        "title": "Link button",
+        "code": "<Button as=\"link\" href=\"/settings\">Go to Settings</Button>"
+      },
+      {
+        "title": "With size",
+        "code": "<Button size=\"lg\">Large Button</Button>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Button.tsx"
+  },
+  {
+    "name": "Card",
+    "category": "Core",
+    "description": "Card - A container component with glassmorphism styling and optional header/footer.\n\nCards provide a way to group related content with consistent styling. They support\noptional header and footer sections, multiple visual variants, and full StylingProps.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "CardVariant",
+        "description": "Visual style variant",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "React.ReactNode",
+        "description": "Content to display in the card header",
+        "required": false
+      },
+      {
+        "name": "footer",
+        "type": "React.ReactNode",
+        "description": "Content to display in the card footer",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic card",
+        "code": "<Card>\n<p>Card content goes here</p>\n</Card>"
+      },
+      {
+        "title": "Card with header and footer",
+        "code": "<Card header=\"Title\" footer={<Button>Action</Button>}>\n<p>Card content</p>\n</Card>"
+      },
+      {
+        "title": "Outlined card",
+        "code": "<Card variant=\"outline\" p=\"lg\">\n<p>Outlined card</p>\n</Card>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Card.tsx"
+  },
+  {
+    "name": "Checkbox",
+    "category": "Core",
+    "description": "Checkbox - A styled checkbox input with optional label and description.\n\nSupports indeterminate state for \"select all\" scenarios, labels, descriptions,\nand error states. Uses native checkbox semantics.",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "Label displayed next to the checkbox",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "description": "Description text below the label",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "description": "Error message to display",
+        "required": false
+      },
+      {
+        "name": "indeterminate",
+        "type": "boolean",
+        "description": "Whether the checkbox is in an indeterminate state",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic checkbox",
+        "code": "<Checkbox\nchecked={isChecked}\nonChange={e => setIsChecked(e.target.checked)}\n/>"
+      },
+      {
+        "title": "With label and description",
+        "code": "<Checkbox\nlabel=\"Accept terms\"\ndescription=\"I agree to the terms and conditions\"\nchecked={accepted}\nonChange={e => setAccepted(e.target.checked)}\n/>"
+      },
+      {
+        "title": "Indeterminate state",
+        "code": "<Checkbox\nlabel=\"Select all\"\nindeterminate={someSelected && !allSelected}\nchecked={allSelected}\nonChange={handleSelectAll}\n/>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Checkbox.tsx"
+  },
+  {
+    "name": "Code",
+    "category": "Core",
+    "description": "Code component",
+    "props": [
+      {
+        "name": "block",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "CodeVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Code.tsx"
+  },
+  {
+    "name": "Container",
+    "category": "Core",
+    "description": "Container component",
+    "props": [
+      {
+        "name": "fluid",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Container.tsx"
+  },
+  {
+    "name": "Divider",
+    "category": "Core",
+    "description": "Divider component",
+    "props": [
+      {
+        "name": "orientation",
+        "type": "'horizontal' | 'vertical'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "labelPosition",
+        "type": "'left' | 'center' | 'right'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Divider.tsx"
+  },
+  {
+    "name": "Drawer",
+    "category": "Core",
+    "description": "Drawer - A slide-in panel component from any edge of the screen.\n\nFeatures:\n- Slides in from left, right, top, or bottom\n- Animated open/close transitions\n- Optional overlay backdrop\n- Click outside or escape to close\n- Customizable size and padding",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "Whether the drawer is visible",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "Callback when the drawer is closed",
+        "required": true
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "description": "Title displayed in the drawer header",
+        "required": false
+      },
+      {
+        "name": "position",
+        "type": "'left' | 'right' | 'top' | 'bottom'",
+        "description": "Side from which the drawer slides in",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "string | number",
+        "description": "Width/height of the drawer (e.g., \"300px\", \"50%\")",
+        "required": false
+      },
+      {
+        "name": "padding",
+        "type": "string",
+        "description": "Padding class to apply (e.g., \"p-4\")",
+        "required": false
+      },
+      {
+        "name": "overlay",
+        "type": "boolean",
+        "description": "Whether to show an overlay behind the drawer",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic drawer",
+        "code": "<Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>\n<p>Drawer content</p>\n</Drawer>"
+      },
+      {
+        "title": "Right-side drawer with title",
+        "code": "<Drawer\nisOpen={isOpen}\nonClose={() => setIsOpen(false)}\nposition=\"right\"\ntitle=\"Settings\"\nsize=\"400px\"\n>\n<SettingsForm />\n</Drawer>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Drawer.tsx"
+  },
+  {
+    "name": "Flex",
+    "category": "Core",
+    "description": "Flex component",
+    "props": [
+      {
+        "name": "direction",
+        "type": "FlexDirection",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "justify",
+        "type": "FlexJustify",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "FlexAlign",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gap",
+        "type": "FlexGap",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "wrap",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Flex.tsx"
+  },
+  {
+    "name": "Footer",
+    "category": "Core",
+    "description": "Footer - A layout component for application footers and docks.\n\nSupports multiple variants including a desktop dock that can auto-hide and\nreveal on hover. The desktop variant provides a macOS-like dock experience.",
+    "props": [
+      {
+        "name": "hideByDefault",
+        "type": "boolean",
+        "description": "Whether to hide the footer by default (hover to reveal)",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "FooterVariant",
+        "description": "Layout variant to use",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Desktop dock",
+        "code": "<Footer variant=\"desktop\">\n<AppIcon name=\"Settings\" icon={<IconSettings />} />\n<AppIcon name=\"Files\" icon={<IconFolder />} />\n</Footer>"
+      },
+      {
+        "title": "Auto-hiding dock",
+        "code": "<Footer variant=\"desktop\" hideByDefault>\n<AppIcon name=\"Settings\" icon={<IconSettings />} />\n</Footer>"
+      },
+      {
+        "title": "Page footer",
+        "code": "<Footer variant=\"page\">\n<p>© 2024 My App</p>\n</Footer>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Footer.tsx"
+  },
+  {
+    "name": "Grid",
+    "category": "Core",
+    "description": "Grid component",
+    "props": [
+      {
+        "name": "cols",
+        "type": "GridCols",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gap",
+        "type": "GridGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Grid.tsx"
+  },
+  {
+    "name": "Group",
+    "category": "Core",
+    "description": "Group component",
+    "props": [
+      {
+        "name": "gap",
+        "type": "GroupGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Group.tsx"
+  },
+  {
+    "name": "Header",
+    "category": "Core",
+    "description": "Header - A layout component for application headers with theme toggle support.\n\nAutomatically integrates with ThemeProvider when available to provide a theme\ntoggle button. Supports multiple layout variants for different use cases.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "HeaderVariant",
+        "description": "Layout variant to use",
+        "required": false
+      },
+      {
+        "name": "showDarkModeToggle",
+        "type": "boolean",
+        "description": "Whether to show the dark mode toggle button",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic header",
+        "code": "<Header>\n<Logo />\n<Navigation />\n</Header>"
+      },
+      {
+        "title": "Desktop header",
+        "code": "<Header variant=\"desktop\">\n<Clock />\n</Header>"
+      },
+      {
+        "title": "Without theme toggle",
+        "code": "<Header showDarkModeToggle={false}>\n<Navigation />\n</Header>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Header.tsx"
+  },
+  {
+    "name": "Input",
+    "category": "Core",
+    "description": "Input - A text input component with optional left/right sections.\n\nFeatures include:\n- Left and right sections for icons or actions\n- Error state styling\n- Multiple sizes (xs, sm, md, lg, xl)\n- Filled or unstyled variants\n- Full StylingProps support",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'filled' | 'unstyled'",
+        "description": "Visual style variant",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "boolean | ReactNode",
+        "description": "Error state - can be boolean or error message",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "ReactNode",
+        "description": "Content to render on the left side of the input",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "ReactNode",
+        "description": "Content to render on the right side of the input",
+        "required": false
+      },
+      {
+        "name": "wrapperProps",
+        "type": "InputHTMLAttributes<HTMLDivElement>",
+        "description": "Props to pass to the wrapper div",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic input",
+        "code": "<Input placeholder=\"Enter text...\" />"
+      },
+      {
+        "title": "Input with icon",
+        "code": "<Input\nleftSection={<IconSearch size={16} />}\nplaceholder=\"Search...\"\n/>"
+      },
+      {
+        "title": "Input with error",
+        "code": "<Input error=\"This field is required\" />"
+      },
+      {
+        "title": "Different sizes",
+        "code": "<Input size=\"sm\" placeholder=\"Small\" />\n<Input size=\"lg\" placeholder=\"Large\" />"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Input.tsx"
+  },
+  {
+    "name": "Kbd",
+    "category": "Core",
+    "description": "Kbd component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "KbdVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Kbd.tsx"
+  },
+  {
+    "name": "Loading",
+    "category": "Core",
+    "description": "Loading component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "LoadingVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Loading.tsx"
+  },
+  {
+    "name": "Main",
+    "category": "Core",
+    "description": "Main component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "MainVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Main.tsx"
+  },
+  {
+    "name": "Menu",
+    "category": "Core",
+    "description": "Menu component",
+    "props": [
+      {
+        "name": "closeOnItemClick",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "trigger",
+        "type": "'click' | 'hover'",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Menu.tsx"
+  },
+  {
+    "name": "Modal",
+    "category": "Core",
+    "description": "Modal - A dialog overlay component with glassmorphism styling.\n\nFeatures:\n- Animated open/close transitions\n- Click outside to close\n- Escape key to close\n- Optional save action with button\n- Customizable close and save buttons",
+    "props": [
+      {
+        "name": "isOpen",
+        "type": "boolean",
+        "description": "Whether the modal is visible",
+        "required": true
+      },
+      {
+        "name": "onClose",
+        "type": "() => void",
+        "description": "Callback when the modal is closed",
+        "required": true
+      },
+      {
+        "name": "onSave",
+        "type": "() => void",
+        "description": "Optional callback for save action",
+        "required": false
+      },
+      {
+        "name": "closeButton",
+        "type": "ReactNode",
+        "description": "Custom close button (overrides default)",
+        "required": false
+      },
+      {
+        "name": "saveButton",
+        "type": "ReactNode",
+        "description": "Custom save button (overrides default)",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic modal",
+        "code": "<Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>\n<h2>Modal Title</h2>\n<p>Modal content goes here</p>\n</Modal>"
+      },
+      {
+        "title": "Modal with save action",
+        "code": "<Modal\nisOpen={isOpen}\nonClose={() => setIsOpen(false)}\nonSave={handleSave}\n>\n<form>Form content</form>\n</Modal>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Modal.tsx"
+  },
+  {
+    "name": "NavigationMenu",
+    "category": "Core",
+    "description": "NavigationMenu component",
+    "props": [
+      {
+        "name": "items",
+        "type": "NavigationMenuItem[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "defaultActiveId",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onItemChange",
+        "type": "(itemId: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "'desktop' | 'app' | 'page' | 'sidebar'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/NavigationMenu.tsx"
+  },
+  {
+    "name": "NumberInput",
+    "category": "Core",
+    "description": "NumberInput component",
+    "props": [
+      {
+        "name": "min",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "hideControls",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/NumberInput.tsx"
+  },
+  {
+    "name": "PasswordInput",
+    "category": "Core",
+    "description": "PasswordInput component",
+    "props": [
+      {
+        "name": "visibilityToggleIcon",
+        "type": "(visible: boolean) => ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/PasswordInput.tsx"
+  },
+  {
+    "name": "Popover",
+    "category": "Core",
+    "description": "Popover component",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "target",
+        "type": "ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "dropdown",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(opened: boolean) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "position",
+        "type": "'bottom' | 'top' | 'left' | 'right'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withArrow",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "number | string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "trapFocus",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "closeOnClickOutside",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Popover.tsx"
+  },
+  {
+    "name": "Progress",
+    "category": "Core",
+    "description": "Progress component",
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "striped",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "animated",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Progress.tsx"
+  },
+  {
+    "name": "Radio",
+    "category": "Core",
+    "description": "Radio component",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Radio.tsx"
+  },
+  {
+    "name": "SegmentedControl",
+    "category": "Core",
+    "description": "SegmentedControl component",
+    "props": [
+      {
+        "name": "data",
+        "type": "(string | SegmentedControlItem)[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "onChange",
+        "type": "(value: string) => void",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fullWidth",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/SegmentedControl.tsx"
+  },
+  {
+    "name": "Select",
+    "category": "Core",
+    "description": "Select - A dropdown select component with optional label and description.\n\nSupports both simple string arrays and complex SelectItem objects for options.\nFeatures include label, description, error states, and left/right sections.",
+    "props": [
+      {
+        "name": "data",
+        "type": "(string | SelectItem)[]",
+        "description": "Array of options - can be strings or SelectItem objects",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "Label displayed above the select",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "description": "Description text below the select",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "description": "Error message to display",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "'filled' | 'unstyled'",
+        "description": "Visual variant",
+        "required": false
+      },
+      {
+        "name": "leftSection",
+        "type": "ReactNode",
+        "description": "Content to render on the left side",
+        "required": false
+      },
+      {
+        "name": "rightSection",
+        "type": "ReactNode",
+        "description": "Content to render on the right side",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic usage",
+        "code": "<Select data={['Option 1', 'Option 2', 'Option 3']} />"
+      },
+      {
+        "title": "With label and description",
+        "code": "<Select\nlabel=\"Country\"\ndescription=\"Select your country\"\ndata={[\n{ value: 'us', label: 'United States' },\n{ value: 'uk', label: 'United Kingdom' },\n]}\n/>"
+      },
+      {
+        "title": "With error",
+        "code": "<Select\nlabel=\"Required field\"\nerror=\"Please select an option\"\ndata={['Option 1', 'Option 2']}\n/>"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Select.tsx"
+  },
+  {
+    "name": "Sidebar",
+    "category": "Core",
+    "description": "Sidebar component",
+    "props": [
+      {
+        "name": "isScrollable",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Sidebar.tsx"
+  },
+  {
+    "name": "SidebarNavigation",
+    "category": "Core",
+    "description": "SidebarNavigation component",
+    "props": [
+      {
+        "name": "items",
+        "type": "SidebarNavigationItem[]",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "activeItem",
+        "type": "SidebarNavigationItem",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "onSelect",
+        "type": "(item: SidebarNavigationItem) => void",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "sections",
+        "type": "string[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/SidebarNavigation.tsx"
+  },
+  {
+    "name": "Skeleton",
+    "category": "Core",
+    "description": "Skeleton component",
+    "props": [
+      {
+        "name": "visible",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "number | string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "number | string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "circle",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "animate",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Skeleton.tsx"
+  },
+  {
+    "name": "Slider",
+    "category": "Core",
+    "description": "Slider component",
+    "props": [
+      {
+        "name": "color",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "marks",
+        "type": "{ value: number; label?: ReactNode }[]",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Slider.tsx"
+  },
+  {
+    "name": "Stack",
+    "category": "Core",
+    "description": "Stack component",
+    "props": [
+      {
+        "name": "gap",
+        "type": "StackGap",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Stack.tsx"
+  },
+  {
+    "name": "Switch",
+    "category": "Core",
+    "description": "Switch - A toggle switch component for boolean values.\n\nA styled checkbox rendered as a toggle switch with support for labels,\ndescriptions, and multiple sizes. Uses native checkbox semantics.",
+    "props": [
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "Label displayed next to the switch",
+        "required": false
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "description": "Description text below the label",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "ReactNode",
+        "description": "Error message to display",
+        "required": false
+      },
+      {
+        "name": "onLabel",
+        "type": "ReactNode",
+        "description": "Label shown when switch is on",
+        "required": false
+      },
+      {
+        "name": "offLabel",
+        "type": "ReactNode",
+        "description": "Label shown when switch is off",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "title": "Basic switch",
+        "code": "<Switch checked={isEnabled} onChange={e => setIsEnabled(e.target.checked)} />"
+      },
+      {
+        "title": "With label and description",
+        "code": "<Switch\nlabel=\"Enable notifications\"\ndescription=\"Receive updates about new features\"\nchecked={notifications}\nonChange={e => setNotifications(e.target.checked)}\n/>"
+      },
+      {
+        "title": "Different sizes",
+        "code": "<Switch size=\"sm\" label=\"Small\" />\n<Switch size=\"lg\" label=\"Large\" />"
+      }
+    ],
+    "sourceFile": "/@plcl-core/src/components/Switch.tsx"
+  },
+  {
+    "name": "Text",
+    "category": "Core",
+    "description": "Text component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "TextVariant",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "dimmed",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "gradient",
+        "type": "{ from: string; to: string; deg?: number }",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "span",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "fw",
+        "type": "number | string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "component",
+        "type": "ElementType",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "truncate",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "lineClamp",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "'left' | 'center' | 'right' | 'justify'",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Text.tsx"
+  },
+  {
+    "name": "Textarea",
+    "category": "Core",
+    "description": "Textarea component",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'filled' | 'unstyled'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "error",
+        "type": "boolean | React.ReactNode",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "autosize",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "minRows",
+        "type": "number",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "maxRows",
+        "type": "number",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Textarea.tsx"
+  },
+  {
+    "name": "Title",
+    "category": "Core",
+    "description": "Title component",
+    "props": [
+      {
+        "name": "order",
+        "type": "TitleOrder",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "TitleVariant",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Title.tsx"
+  },
+  {
+    "name": "Tooltip",
+    "category": "Core",
+    "description": "Tooltip component",
+    "props": [
+      {
+        "name": "id",
+        "type": "string",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "description": "",
+        "required": true
+      },
+      {
+        "name": "position",
+        "type": "'top' | 'right' | 'bottom' | 'left'",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "withArrow",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      },
+      {
+        "name": "opened",
+        "type": "boolean",
+        "description": "",
+        "required": false
+      }
+    ],
+    "examples": [],
+    "sourceFile": "/@plcl-core/src/components/Tooltip.tsx"
+  }
+]

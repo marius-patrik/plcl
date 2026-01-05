@@ -4,7 +4,7 @@ import { type StylingProps, getStylingClasses } from '../styles';
 export type BadgeVariant = 'filled' | 'light' | 'outline' | 'dot';
 
 export interface BadgeProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	variant?: BadgeVariant;
 	leftSection?: ReactNode;
@@ -30,6 +30,7 @@ const Badge: FC<PropsWithChildren<BadgeProps>> = ({
 	className = '',
 	id,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -51,6 +52,7 @@ const Badge: FC<PropsWithChildren<BadgeProps>> = ({
 }) => {
 	const componentId = id || 'Badge';
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface ProgressProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	value: number; // 0-100
 	color?: string;
@@ -17,6 +17,7 @@ const Progress: FC<ProgressProps> = ({
 	animated,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -37,6 +38,7 @@ const Progress: FC<ProgressProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

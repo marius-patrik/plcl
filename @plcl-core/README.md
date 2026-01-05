@@ -35,7 +35,7 @@ Beautiful, modern UI components with that signature frosted glass aesthetic.
 ## 📦 Installation
 
 ```bash
-npm install plc-core
+npm install @plcl/core
 ```
 
 ### Peer Dependencies
@@ -53,19 +53,16 @@ npm install react react-dom
 ### Basic Usage
 
 ```tsx
-import { Button, Card, Shell } from "plc-core";
-import "plc-core/styles.css";
+import { Button, Card, ThemeProvider } from "@plcl/core";
+import "@plcl/core/styles.css";
 
 function App() {
   return (
-    <Shell
-      header={<Header>My App</Header>}
-      footer={<Footer>Footer</Footer>}
-    >
+    <ThemeProvider>
       <Card variant="glass">
         <Button variant="glass">Click me</Button>
       </Card>
-    </Shell>
+    </ThemeProvider>
   );
 }
 ```
@@ -75,7 +72,7 @@ function App() {
 Don't forget to import the CSS file:
 
 ```tsx
-import "plc-core/styles.css";
+import "@plcl/core/styles.css";
 ```
 
 Or in your main CSS file:
@@ -95,7 +92,7 @@ Or in your main CSS file:
 Versatile button component with multiple variants.
 
 ```tsx
-import { Button } from "plc-core";
+import { Button } from "@plcl/core";
 
 <Button variant="glass" type="button" onClick={() => {}}>
   Click me
@@ -109,7 +106,7 @@ import { Button } from "plc-core";
 Container component with glassmorphism styling.
 
 ```tsx
-import { Card } from "plc-core";
+import { Card } from "@plcl/core";
 
 <Card variant="glass" header={<h2>Title</h2>} footer={<Button>Action</Button>}>
   Card content
@@ -123,7 +120,7 @@ import { Card } from "plc-core";
 Loading indicator component.
 
 ```tsx
-import { Loading } from "plc-core";
+import { Loading } from "@plcl/core";
 
 <Loading variant="glass" />
 ```
@@ -139,7 +136,7 @@ import { Loading } from "plc-core";
 Text input field with glass styling.
 
 ```tsx
-import { Input } from "plc-core";
+import { Input } from "@plcl/core";
 
 <Input
   type="text"
@@ -154,7 +151,7 @@ import { Input } from "plc-core";
 Multi-line text input.
 
 ```tsx
-import { Textarea } from "plc-core";
+import { Textarea } from "@plcl/core";
 
 <Textarea
   placeholder="Enter message"
@@ -169,7 +166,7 @@ import { Textarea } from "plc-core";
 Dropdown select component.
 
 ```tsx
-import { Select } from "plc-core";
+import { Select } from "@plcl/core";
 
 <Select
   items={[
@@ -186,7 +183,7 @@ import { Select } from "plc-core";
 Checkbox input.
 
 ```tsx
-import { Checkbox } from "plc-core";
+import { Checkbox } from "@plcl/core";
 
 <Checkbox
   checked={checked}
@@ -200,7 +197,7 @@ import { Checkbox } from "plc-core";
 Radio button group.
 
 ```tsx
-import { Radio } from "plc-core";
+import { Radio } from "@plcl/core";
 
 <Radio
   name="option"
@@ -218,7 +215,7 @@ import { Radio } from "plc-core";
 Toggle switch component.
 
 ```tsx
-import { Switch } from "plc-core";
+import { Switch } from "@plcl/core";
 
 <Switch
   checked={enabled}
@@ -232,7 +229,7 @@ import { Switch } from "plc-core";
 Range slider input.
 
 ```tsx
-import { Slider } from "plc-core";
+import { Slider } from "@plcl/core";
 
 <Slider
   min={0}
@@ -247,7 +244,7 @@ import { Slider } from "plc-core";
 Numeric input with increment/decrement controls.
 
 ```tsx
-import { NumberInput } from "plc-core";
+import { NumberInput } from "@plcl/core";
 
 <NumberInput
   min={0}
@@ -262,7 +259,7 @@ import { NumberInput } from "plc-core";
 Password input with show/hide toggle.
 
 ```tsx
-import { PasswordInput } from "plc-core";
+import { PasswordInput } from "@plcl/core";
 
 <PasswordInput
   value={password}
@@ -275,7 +272,7 @@ import { PasswordInput } from "plc-core";
 Segmented control for selecting options.
 
 ```tsx
-import { SegmentedControl } from "plc-core";
+import { SegmentedControl } from "@plcl/core";
 
 <SegmentedControl
   value={selected}
@@ -288,28 +285,12 @@ import { SegmentedControl } from "plc-core";
 
 ### 📊 Data Display
 
-#### Table
-
-Data table component.
-
-```tsx
-import { Table } from "plc-core";
-
-<Table
-  headers={["Name", "Email", "Role"]}
-  rows={[
-    ["John Doe", "john@example.com", "Admin"],
-    ["Jane Smith", "jane@example.com", "User"],
-  ]}
-/>
-```
-
 #### Progress
 
 Progress bar component.
 
 ```tsx
-import { Progress } from "plc-core";
+import { Progress } from "@plcl/core";
 
 <Progress value={75} max={100} />
 ```
@@ -319,7 +300,7 @@ import { Progress } from "plc-core";
 Loading skeleton placeholder.
 
 ```tsx
-import { Skeleton } from "plc-core";
+import { Skeleton } from "@plcl/core";
 
 <Skeleton width="200px" height="20px" />
 ```
@@ -329,7 +310,7 @@ import { Skeleton } from "plc-core";
 Badge component for labels and tags.
 
 ```tsx
-import { Badge } from "plc-core";
+import { Badge } from "@plcl/core";
 
 <Badge variant="glass">New</Badge>
 ```
@@ -341,7 +322,7 @@ import { Badge } from "plc-core";
 User avatar component.
 
 ```tsx
-import { Avatar } from "plc-core";
+import { Avatar } from "@plcl/core";
 
 <Avatar src="/avatar.jpg" alt="User" size="md" />
 ```
@@ -351,7 +332,7 @@ import { Avatar } from "plc-core";
 Alert message component.
 
 ```tsx
-import { Alert } from "plc-core";
+import { Alert } from "@plcl/core";
 
 <Alert variant="info" title="Information">
   This is an alert message.
@@ -365,7 +346,7 @@ import { Alert } from "plc-core";
 Collapsible content sections.
 
 ```tsx
-import { Accordion } from "plc-core";
+import { Accordion } from "@plcl/core";
 
 <Accordion
   items={[
@@ -379,29 +360,12 @@ import { Accordion } from "plc-core";
 
 ### 🧭 Navigation & Overlay
 
-#### Tabs
-
-Tab navigation component.
-
-```tsx
-import { Tabs } from "plc-core";
-
-<Tabs
-  tabs={[
-    { id: "1", label: "Tab 1", content: <div>Content 1</div> },
-    { id: "2", label: "Tab 2", content: <div>Content 2</div> },
-  ]}
-  activeTab="1"
-  onChange={setActiveTab}
-/>
-```
-
 #### Menu
 
 Dropdown menu component.
 
 ```tsx
-import { Menu } from "plc-core";
+import { Menu } from "@plcl/core";
 
 <Menu
   items={[
@@ -416,7 +380,7 @@ import { Menu } from "plc-core";
 Modal dialog overlay.
 
 ```tsx
-import { Modal } from "plc-core";
+import { Modal } from "@plcl/core";
 
 <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Dialog Title">
   Modal content
@@ -428,7 +392,7 @@ import { Modal } from "plc-core";
 Side drawer component.
 
 ```tsx
-import { Drawer } from "plc-core";
+import { Drawer } from "@plcl/core";
 
 <Drawer
   isOpen={isOpen}
@@ -444,7 +408,7 @@ import { Drawer } from "plc-core";
 Popover tooltip component.
 
 ```tsx
-import { Popover } from "plc-core";
+import { Popover } from "@plcl/core";
 
 <Popover content="Popover content">
   <Button>Hover me</Button>
@@ -456,7 +420,7 @@ import { Popover } from "plc-core";
 Tooltip component.
 
 ```tsx
-import { Tooltip } from "plc-core";
+import { Tooltip } from "@plcl/core";
 
 <Tooltip content="Tooltip text">
   <Button>Hover me</Button>
@@ -468,7 +432,7 @@ import { Tooltip } from "plc-core";
 Hamburger menu button.
 
 ```tsx
-import { Burger } from "plc-core";
+import { Burger } from "@plcl/core";
 
 <Burger opened={isOpen} onClick={() => setIsOpen(!isOpen)} />
 ```
@@ -482,7 +446,7 @@ import { Burger } from "plc-core";
 Display container with title and action buttons.
 
 ```tsx
-import { Box } from "plc-core";
+import { Box } from "@plcl/core";
 
 <Box title="Section Title" buttons={<Button>Add</Button>}>
   Content
@@ -494,7 +458,7 @@ import { Box } from "plc-core";
 Centered container with max-width.
 
 ```tsx
-import { Container } from "plc-core";
+import { Container } from "@plcl/core";
 
 <Container size="lg">
   Content
@@ -506,7 +470,7 @@ import { Container } from "plc-core";
 CSS Grid wrapper component.
 
 ```tsx
-import { Grid } from "plc-core";
+import { Grid } from "@plcl/core";
 
 <Grid cols={3} gap="md">
   <div>Item 1</div>
@@ -523,7 +487,7 @@ import { Grid } from "plc-core";
 Flexbox wrapper component.
 
 ```tsx
-import { Flex } from "plc-core";
+import { Flex } from "@plcl/core";
 
 <Flex direction="row" justify="between" align="center" gap="md">
   <div>Left</div>
@@ -541,7 +505,7 @@ import { Flex } from "plc-core";
 Vertical flex container (shorthand for `Flex direction="col"`).
 
 ```tsx
-import { Stack } from "plc-core";
+import { Stack } from "@plcl/core";
 
 <Stack gap="md">
   <div>Item 1</div>
@@ -554,7 +518,7 @@ import { Stack } from "plc-core";
 Horizontal flex container (shorthand for `Flex direction="row"`).
 
 ```tsx
-import { Group } from "plc-core";
+import { Group } from "@plcl/core";
 
 <Group gap="sm">
   <Button>Save</Button>
@@ -567,7 +531,7 @@ import { Group } from "plc-core";
 Flexible spacing element.
 
 ```tsx
-import { Spacer } from "plc-core";
+import { Spacer } from "@plcl/core";
 
 <Flex>
   <div>Left</div>
@@ -581,7 +545,7 @@ import { Spacer } from "plc-core";
 Horizontal divider line.
 
 ```tsx
-import { Divider } from "plc-core";
+import { Divider } from "@plcl/core";
 
 <div>Content 1</div>
 <Divider />
@@ -592,23 +556,22 @@ import { Divider } from "plc-core";
 
 ### 🖥️ Interface Components
 
-#### Shell
+#### Header, Footer, Main, Sidebar
 
-Desktop shell container with header, footer, and page management.
+Layout components for building application structures.
 
 ```tsx
-import { Shell } from "plc-core";
+import { Header, Footer, Main, Sidebar } from "@plcl/core";
 
-<Shell
-  header={<Header>Status Bar</Header>}
-  footer={<Footer>Dock</Footer>}
-  pages={[
-    { id: "home", content: <HomePage /> },
-    { id: "about", content: <AboutPage /> },
-  ]}
-  activePage="home"
-  activeAppId="home"
-/>
+<Header>
+  <span>Status info</span>
+</Header>
+<Main>
+  <div>Main content</div>
+</Main>
+<Footer>
+  <AppIcon icon={<IconHome />} label="Home" />
+</Footer>
 ```
 
 #### AppIcon
@@ -616,7 +579,7 @@ import { Shell } from "plc-core";
 Desktop-style application icon.
 
 ```tsx
-import { AppIcon } from "plc-core";
+import { AppIcon } from "@plcl/core";
 
 <AppIcon
   icon={<IconHome />}
@@ -630,7 +593,7 @@ import { AppIcon } from "plc-core";
 Application header/status bar.
 
 ```tsx
-import { Header } from "plc-core";
+import { Header } from "@plcl/core";
 
 <Header>
   <span>Status info</span>
@@ -642,7 +605,7 @@ import { Header } from "plc-core";
 Application footer/dock bar.
 
 ```tsx
-import { Footer } from "plc-core";
+import { Footer } from "@plcl/core";
 
 <Footer>
   <AppIcon icon={<IconHome />} label="Home" />
@@ -658,7 +621,7 @@ import { Footer } from "plc-core";
 Text component with styling options.
 
 ```tsx
-import { Text } from "plc-core";
+import { Text } from "@plcl/core";
 
 <Text size="lg" weight="bold" align="center">
   Text content
@@ -670,7 +633,7 @@ import { Text } from "plc-core";
 Heading component.
 
 ```tsx
-import { Title } from "plc-core";
+import { Title } from "@plcl/core";
 
 <Title order={1}>Main Title</Title>
 ```
@@ -682,7 +645,7 @@ import { Title } from "plc-core";
 Inline code component.
 
 ```tsx
-import { Code } from "plc-core";
+import { Code } from "@plcl/core";
 
 <Code>const x = 1;</Code>
 ```
@@ -692,7 +655,7 @@ import { Code } from "plc-core";
 Blockquote component.
 
 ```tsx
-import { Blockquote } from "plc-core";
+import { Blockquote } from "@plcl/core";
 
 <Blockquote>
   This is a quote.
@@ -704,7 +667,7 @@ import { Blockquote } from "plc-core";
 Keyboard key indicator.
 
 ```tsx
-import { Kbd } from "plc-core";
+import { Kbd } from "@plcl/core";
 
 Press <Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy
 ```
@@ -749,8 +712,8 @@ Since components are built with Tailwind CSS, you can customize them using Tailw
 
 ```bash
 # Clone the repository
-git clone https://github.com/marius-patrik/plc-core.git
-cd plc-core
+git clone https://github.com/marius-patrik/plcl.git
+cd plcl
 
 # Install dependencies
 npm install
@@ -863,16 +826,16 @@ This project is licensed under the **MIT License**.
 
 ## 🔗 Related Projects
 
-- **[plc-core-types](../plc-core-types/)** - TypeScript type definitions
-- **[plc-ui](../plc-ui/)** - Desktop UI library
-- **[plc-docs](../plc-docs/)** - Documentation website
-- **[plc-playground](../plc-playground/)** - Component playground
+- **[@plcl-core-types](../@plcl-core-types/)** - TypeScript type definitions
+- **[@plcl-ui](../@plcl-ui/)** - Desktop UI library
+- **[docs](../docs/)** - Documentation website
+- **[playground](../playground/)** - Component playground
 
 ---
 
 ## 📞 Support
 
-For questions, issues, or contributions, please visit the main [PLC repository](https://github.com/marius-patrik/plc).
+For questions, issues, or contributions, please visit the main [PLCL repository](https://github.com/marius-patrik/plcl).
 
 ---
 

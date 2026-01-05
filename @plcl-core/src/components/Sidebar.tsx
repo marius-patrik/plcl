@@ -12,9 +12,10 @@ const Sidebar: FC<PropsWithChildren<SidebarProps>> = ({
 }) => {
 	return (
 		<aside
-			className={`w-64 variant-glass ${
-				isScrollable ? 'overflow-y-auto' : 'overflow-hidden'
+			className={`w-64 h-full variant-glass flex flex-col ${
+				isScrollable ? 'overflow-y-auto overflow-x-hidden' : 'overflow-hidden'
 			} ${className}`}
+			style={{ maxHeight: '100vh' }}
 			{...props}
 		>
 			{children}

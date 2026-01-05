@@ -2,7 +2,7 @@ import type { FC, InputHTMLAttributes, ReactNode } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface RadioProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>,
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'style'>,
 		StylingProps {
 	label?: ReactNode;
 	description?: ReactNode;
@@ -17,6 +17,7 @@ const Radio: FC<RadioProps> = ({
 	id,
 	disabled,
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -37,6 +38,7 @@ const Radio: FC<RadioProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,

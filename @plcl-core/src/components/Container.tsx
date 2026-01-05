@@ -2,7 +2,7 @@ import type { FC, HTMLAttributes } from 'react';
 import { type StylingProps, getStylingClasses } from '../styles';
 
 export interface ContainerProps
-	extends HTMLAttributes<HTMLDivElement>,
+	extends Omit<HTMLAttributes<HTMLDivElement>, 'style'>,
 		StylingProps {
 	fluid?: boolean;
 }
@@ -12,6 +12,7 @@ const Container: FC<ContainerProps> = ({
 	children,
 	className = '',
 	// Styling props
+	style = 'unstyled',
 	m,
 	mt,
 	mb,
@@ -32,6 +33,7 @@ const Container: FC<ContainerProps> = ({
 	...props
 }) => {
 	const stylingClasses = getStylingClasses({
+		style,
 		m,
 		mt,
 		mb,
